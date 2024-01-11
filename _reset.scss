@@ -13,7 +13,7 @@ button,
 input,
 select,
 textarea {
-  font-family: $font-family_1;
+  font-family: $font-family-1;
 }
 
 a {
@@ -33,7 +33,13 @@ body {
   font-family: $font-family-2;
   position: relative;
   color: var(--color-1);
-  transition: all 0.4s ease-in-out;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    border-left: none;
+    border-right: none;
+  }
 }
 
 .hidden {
@@ -60,13 +66,21 @@ body {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: calc(100% - 64px);
+    max-width: 768px;
+    padding: 0 2rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container {
-    max-width: calc(100% - 128px);
+    max-width: 1024px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -77,19 +91,39 @@ header {
 
   nav {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    @media screen and (min-width: 1440px) {
+      & {
+        border-bottom: none;
+      }
+    }
     .container {
       height: 4rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+      @media screen and (min-width: 1440px) {
+        & {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+      }
       .logo {
         .logo-span {
           display: none;
+          font-size: 30px;
+          font-weight: 700;
         }
         .logo-svg {
           width: 24px;
           height: 24px;
+        }
+        @media screen and (min-width: 1024px) {
+          .logo-span {
+            display: block;
+          }
+          .logo-svg {
+            display: none;
+          }
         }
       }
 
@@ -152,9 +186,10 @@ header {
         flex-grow: 1;
         justify-content: center;
         font-size: 18px;
-        gap: 10px;
+        gap: 12px;
         font-weight: 600;
         transition: all 0.4s ease-in-out;
+        z-index: 100000000;
       }
       @media screen and (min-width: 768px) {
         .menu {
@@ -169,6 +204,126 @@ header {
           border: none;
           font-size: 14px;
           justify-content: end;
+        }
+      }
+    }
+  }
+
+  .catalog-search-container {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    @media screen and (min-width: 1440px) {
+      border-bottom: none;
+    }
+
+    .container {
+      height: 96px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and (min-width: 1440px) {
+        & {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .catalog-btn {
+        position: relative;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          width: 28px;
+          height: 28px;
+        }
+        span {
+          font-size: 16px;
+          font-weight: 700;
+          display: none;
+          @media screen and (min-width: 768px) {
+            & {
+              display: block;
+            }
+          }
+        }
+        .catalog-container {
+          
+        }
+      }
+
+      .serach-bar {
+        border-radius: 9999px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        padding-left: 18px;
+        width: calc(100% - 100px);
+        position: relative;
+        display: flex;
+
+        @media screen and (min-width: 768px) {
+          max-width: 510px;
+        }
+        @media screen and (min-width: 1024px) {
+          max-width: 460px;
+        }
+        @media screen and (min-width: 1024px) {
+          max-width: 460px;
+        }
+        @media screen and (min-width: 1024px) {
+          max-width: 590px;
+        }
+
+        input {
+          padding: 10px 0;
+          border: none;
+          outline: none;
+          font-size: 16px;
+          font-weight: 500;
+          flex-grow: 1;
+        }
+        .search {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          opacity: 0.4;
+          transition: opacity 0.4s linear;
+          &:hover {
+            opacity: 1;
+          }
+          img {
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 12px;
+            right: 20px;
+          }
+        }
+      }
+
+      .cart {
+        position: relative;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        img {
+          width: 28px;
+          height: 28px;
+        }
+
+        #item-count {
+          position: absolute;
+          top: -5px;
+          right: -10px;
+          font-weight: 700;
+          background: var(--bg-color-3);
+          border-radius: 50%;
+          padding: 2px 8px;
+          font-size: 12px;
         }
       }
     }
