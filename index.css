@@ -4,7 +4,7 @@
   --bg-color-1: #fff;
   --bg-color-2: rgb(245, 245, 245);
   --bg-color-3: rgb(255, 220, 220);
-  --hover-bg-color: rgba(165, 165, 165, 0.6);
+  --hover-bg-color: rgba(222, 222, 222, 0.5);
 }
 
 * {
@@ -47,6 +47,8 @@ body {
 .hidden {
   opacity: 0;
   visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 .inverted {
@@ -166,7 +168,7 @@ header nav .container .menu {
   top: 0;
   transform: translateX(-100%);
   background: var(--bg-color-1);
-  width: 70vw;
+  width: 88vw;
   padding: 16px;
   overflow: hidden;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -195,6 +197,9 @@ header nav .container .menu {
     font-size: 14px;
     justify-content: end;
   }
+  header nav .container .menu li:first-child {
+    display: none;
+  }
 }
 header .catalog-search-container {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -205,6 +210,7 @@ header .catalog-search-container {
   }
 }
 header .catalog-search-container .container {
+  position: relative;
   height: 96px;
   display: flex;
   justify-content: space-between;
@@ -236,6 +242,102 @@ header .catalog-search-container .container .catalog-btn span {
 @media screen and (min-width: 768px) {
   header .catalog-search-container .container .catalog-btn span {
     display: block;
+  }
+}
+header .catalog-search-container .container .catalog-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  background: var(--bg-color-1);
+  width: 88vw;
+  height: 100vh;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+  z-index: 100000000;
+}
+@media screen and (min-width: 768px) {
+  header .catalog-search-container .container .catalog-container {
+    position: absolute;
+    top: 100%;
+    left: 24px;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+header .catalog-search-container .container .catalog-container h1 {
+  padding-top: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 65px;
+  flex-shrink: 0;
+}
+@media screen and (min-width: 768px) {
+  header .catalog-search-container .container .catalog-container h1 {
+    display: none;
+  }
+}
+header .catalog-search-container .container .catalog-container .catalog .presentation-wrapper {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header .catalog-search-container .container .catalog-container .catalog .presentation-wrapper:hover {
+  background: var(--hover-bg-color);
+}
+header .catalog-search-container .container .catalog-container .catalog .presentation-wrapper .left-side {
+  display: flex;
+  gap: 8px;
+}
+header .catalog-search-container .container .catalog-container .catalog .presentation-wrapper .left-side img {
+  display: flex;
+  align-items: center;
+  width: 4rem;
+  height: 24px;
+  border-radius: 9999px;
+}
+header .catalog-search-container .container .catalog-container .catalog .presentation-wrapper .chevron {
+  width: 16px;
+  height: 16px;
+  transition: all 0.4s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  header .catalog-search-container .container .catalog-container .catalog .presentation-wrapper .chevron {
+    transform: rotate(-90deg);
+  }
+}
+header .catalog-search-container .container .catalog-container .wrapper {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+header .catalog-search-container .container .catalog-container .wrapper .category {
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  text-align: start;
+  padding: 8px 0;
+  margin-left: 20px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (min-width: 768px) {
+  header .catalog-search-container .container .catalog-container .wrapper .category {
+    position: absolute;
+    transform: translateX(200px);
+    background: var(--bg-color-1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px 10px 10px 0;
+    width: 200px;
   }
 }
 header .catalog-search-container .container .serach-bar {

@@ -45,6 +45,8 @@ body {
 .hidden {
   opacity: 0;
   visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 .inverted {
@@ -176,7 +178,7 @@ header {
         top: 0;
         transform: translateX(-100%);
         background: var(--bg-color-1);
-        width: 70vw;
+        width: 88vw;
         padding: 16px;
         overflow: hidden;
         border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -190,20 +192,24 @@ header {
         font-weight: 600;
         transition: all 0.4s ease-in-out;
         z-index: 100000000;
-      }
-      @media screen and (min-width: 768px) {
-        .menu {
-          position: static;
-          transform: translateX(0);
-          background: 0;
-          flex-direction: row;
-          padding: 0;
-          height: auto;
-          width: auto;
-          font-weight: 500;
-          border: none;
-          font-size: 14px;
-          justify-content: end;
+
+        @media screen and (min-width: 768px) {
+          & {
+            position: static;
+            transform: translateX(0);
+            background: 0;
+            flex-direction: row;
+            padding: 0;
+            height: auto;
+            width: auto;
+            font-weight: 500;
+            border: none;
+            font-size: 14px;
+            justify-content: end;
+            li:first-child {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -216,6 +222,7 @@ header {
     }
 
     .container {
+      position: relative;
       height: 96px;
       display: flex;
       justify-content: space-between;
@@ -249,8 +256,95 @@ header {
             }
           }
         }
-        .catalog-container {
-          
+      }
+
+      .catalog-container {
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-100%);
+        background: var(--bg-color-1);
+        width: 88vw;
+        height: 100vh;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        font-weight: 600;
+        transition: all 0.4s ease-in-out;
+        z-index: 100000000;
+        @media screen and (min-width: 768px) {
+          position: absolute;
+          top: 100%;
+          left: 24px;
+          width: auto;
+          height: auto;
+          border-radius: 12px;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+          padding-top: 10px;
+          text-align: center;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          height: 65px;
+          flex-shrink: 0;
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        }
+        .catalog .presentation-wrapper {
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem;
+          &:hover {
+            background: var(--hover-bg-color);
+          }
+
+          .left-side {
+            display: flex;
+            gap: 8px;
+            img {
+              display: flex;
+              align-items: center;
+              width: 4rem;
+              height: 24px;
+              border-radius: 9999px;
+            }
+          }
+          .chevron {
+            width: 16px;
+            height: 16px;
+            transition: all 0.4s ease-in-out;
+            @media screen and (min-width: 768px) {
+              transform: rotate(-90deg);
+            }
+          }
+        }
+        .wrapper {
+          font-size: 1rem;
+          display: flex;
+          flex-direction: column;
+          .category {
+            position: relative;
+            transition: all 0.4s ease-in-out;
+            text-align: start;
+            padding: 8px 0;
+            margin-left: 20px;
+            padding-left: 12px;
+            border-left: 1px solid rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            @media screen and (min-width: 768px) {
+              position: absolute;
+              transform: translateX(200px);
+              background: var(--bg-color-1);
+              border: 1px solid rgba(0, 0, 0, 0.2);
+              border-radius: 10px 10px 10px 0;
+              width: 200px;
+            }
+          }
         }
       }
 
