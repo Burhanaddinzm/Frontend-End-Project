@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --color-1: #000;
+  --color-2: #fff;
   --bg-color-1: #fff;
   --bg-color-2: rgb(245, 245, 245);
   --bg-color-3: rgb(255, 220, 220);
+  --bg-color-4: #000;
   --hover-bg-color: rgba(222, 222, 222, 0.5);
   --border-color: rgba(0, 0, 0, 0.2);
+  --arrow-filter1: 98%;
+  --arrow-filter2: 100%;
+  --arrow-filter3: 0%;
+  --arrow-filter4: 7deg;
+  --arrow-filter5: 104%;
+  --arrow-filter6: 101%;
 }
 
 * {
@@ -90,6 +98,7 @@ header {
   position: sticky;
   top: 0;
   background: var(--bg-color-1);
+  z-index: 1000;
 }
 header nav {
   border-bottom: 1px solid var(--border-color);
@@ -444,6 +453,14 @@ header .catalog-search-container .container .cart #item-count {
   font-size: 12px;
 }
 
+footer {
+  border-top: 1px solid var(--border-color);
+}
+@media screen and (min-width: 1440px) {
+  footer {
+    border: none;
+  }
+}
 footer .container {
   padding: 2rem 1rem;
   display: flex;
@@ -461,6 +478,7 @@ footer .container {
 }
 @media screen and (min-width: 1440px) {
   footer .container {
+    border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
   }
 }
@@ -490,4 +508,132 @@ footer p {
   footer p {
     border: none;
   }
+}
+
+main .container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .container .main-img {
+  position: relative;
+  width: 100%;
+  max-height: 290px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  main .container .main-img {
+    max-height: 460px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .container .main-img {
+    max-height: 590px;
+  }
+}
+main .container .main-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .main-img .wrapper {
+  max-height: 85%;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  main .container .main-img .wrapper {
+    left: 16px;
+    top: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .container .main-img .wrapper {
+    justify-content: space-between;
+    height: 85%;
+    left: 32px;
+    top: 32px;
+  }
+}
+main .container .main-img .wrapper .logo {
+  width: 32px;
+  height: 65px;
+}
+main .container .main-img .wrapper .logo svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .main-img .wrapper .intro-container p {
+  font-size: 16px;
+}
+main .container .main-img .wrapper .intro-container .link-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  main .container .main-img .wrapper .intro-container .link-container {
+    flex-direction: row;
+  }
+}
+main .container .main-img .wrapper .intro-container .link-container a {
+  display: flex;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 24px;
+  padding: 4px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s linear;
+}
+main .container .main-img .wrapper .intro-container .link-container a:hover {
+  color: var(--color-2);
+  background: var(--bg-color-4);
+}
+main .container .main-img .wrapper .intro-container .link-container .shop-link {
+  display: flex;
+  align-items: center;
+  background: #000;
+  border-radius: 24px;
+  padding: 8px 16px;
+  max-width: 200px;
+  gap: 16px;
+  transition: all 0.4s linear;
+  color: var(--color-2);
+  border: 2px solid transparent;
+}
+main .container .main-img .wrapper .intro-container .link-container .shop-link p {
+  transition: all 0.4s linear;
+}
+main .container .main-img .wrapper .intro-container .link-container .shop-link:hover {
+  background: var(--bg-color-3);
+}
+main .container .main-img .wrapper .intro-container .link-container .shop-link:hover p {
+  color: var(--color-1);
+}
+main .container .main-img .wrapper .intro-container .link-container .shop-link:hover img {
+  filter: invert(var(--arrow-filter1)) sepia(var(--arrow-filter2)) saturate(var(--arrow-filter3)) hue-rotate(var(--arrow-filter4)) brightness(var(--arrow-filter5)) contrast(var(--arrow-filter6));
+}
+main .container .main-img .wrapper .intro-container .link-container .shop-link a {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: var(--color-2);
+  background: transparent;
+}
+main .container .main-img .wrapper .intro-container .link-container .shop-link img {
+  transition: all 0.4s linear;
+  width: 12px;
+  height: 12px;
 }/*# sourceMappingURL=index.css.map */

@@ -3,5 +3,131 @@
 
 // Index Main
 main {
-    
+  .container {
+    // Container
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // Main Image
+    .main-img {
+      position: relative;
+      width: 100%;
+      max-height: 290px;
+      border-radius: 12px;
+      overflow: hidden;
+      @media screen and (min-width: 1024px) {
+        max-height: 460px;
+      }
+      @media screen and (min-width: 1440px) {
+        max-height: 590px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .wrapper {
+        max-height: 85%;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 768px) {
+          left: 16px;
+          top: 16px;
+        }
+        @media screen and (min-width: 1024px) {
+          justify-content: space-between;
+          height: 85%;
+          left: 32px;
+          top: 32px;
+        }
+
+        .logo {
+          width: 32px;
+          height: 65px;
+          svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .intro-container {
+          p {
+            font-size: 16px;
+          }
+          .link-container {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            font-weight: 700;
+            @media screen and (min-width: 1024px) {
+              flex-direction: row;
+            }
+            a {
+              display: flex;
+              align-items: center;
+              border: 2px solid #000;
+              border-radius: 24px;
+              padding: 4px 16px;
+              font-size: 16px;
+              cursor: pointer;
+              transition: all 0.4s linear;
+              &:hover {
+                color: var(--color-2);
+                background: var(--bg-color-4);
+              }
+            }
+            .shop-link {
+              display: flex;
+              align-items: center;
+              background: #000;
+              border-radius: 24px;
+              padding: 8px 16px;
+              max-width: 200px;
+              gap: 16px;
+              transition: all 0.4s linear;
+              color: var(--color-2);
+              border: 2px solid transparent;
+              p {
+                transition: all 0.4s linear;
+              }
+              &:hover {
+                background: var(--bg-color-3);
+                p {
+                  color: var(--color-1);
+                }
+                img {
+                  filter: invert(var(--arrow-filter1))
+                    sepia(var(--arrow-filter2)) saturate(var(--arrow-filter3))
+                    hue-rotate(var(--arrow-filter4))
+                    brightness(var(--arrow-filter5))
+                    contrast(var(--arrow-filter6));
+                }
+              }
+              a {
+                border: none;
+                border-radius: 0;
+                padding: 0;
+                color: var(--color-2);
+                background: transparent;
+              }
+              img {
+                transition: all 0.4s linear;
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    // Main Image End
+
+    // Container End
+  }
 }

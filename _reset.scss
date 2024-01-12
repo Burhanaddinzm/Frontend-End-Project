@@ -81,6 +81,7 @@ header {
   position: sticky;
   top: 0;
   background: var(--bg-color-1);
+  z-index: 1000;
 
   nav {
     border-bottom: 1px solid var(--border-color);
@@ -431,6 +432,10 @@ header {
 
 // Footer Start
 footer {
+  border-top: 1px solid var(--border-color);
+  @media screen and (min-width: 1440px) {
+    border: none;
+  }
   .container {
     padding: 2rem 1rem;
     display: flex;
@@ -444,6 +449,7 @@ footer {
       padding: 2rem;
     }
     @media screen and (min-width: 1440px) {
+      border-top: 1px solid var(--border-color);
       border-bottom: 1px solid var(--border-color);
     }
     .wrapper {
