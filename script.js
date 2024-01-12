@@ -5,14 +5,23 @@ const menu = document.querySelector(".menu");
 
 const catalogBtn = document.querySelector(".catalog-btn");
 const catalogContainer = document.querySelector(".catalog-container");
-const catageroy = document.querySelectorAll(".category");
+const catagories = document.querySelectorAll(".category");
 const presentationWrapper = document.querySelectorAll(".presentation-wrapper");
 const chevron = document.querySelectorAll(".chevron");
+
+let windowWidth = window.innerWidth;
 
 let isMenuOpen = false;
 let isCatalogOpen = false;
 
-// Will change because of responsive layout
+window.addEventListener("resize", () => {
+  windowWidth = window.innerWidth;
+  if (windowWidth >= 768) {
+    if (isCatalogOpen) catalogContainer.classList.remove("open-menu");
+  } else {
+    if (isCatalogOpen) catalogContainer.classList.add("open-menu");
+  }
+});
 
 burgerMenu.addEventListener("click", () => {
   if (!isMenuOpen && !isCatalogOpen) {
@@ -36,7 +45,7 @@ burgerMenu.addEventListener("click", () => {
 catalogBtn.addEventListener("click", () => {
   if (!isCatalogOpen) {
     burgerMenu.classList.add("open");
-    catalogContainer.classList.add("open-menu");
+    if (windowWidth < 768) catalogContainer.classList.add("open-menu");
     catalogContainer.classList.remove("hidden");
     isCatalogOpen = true;
   } else {
@@ -49,7 +58,16 @@ catalogBtn.addEventListener("click", () => {
 
 presentationWrapper.forEach((wrapper, index) => {
   wrapper.addEventListener("click", () => {
-    catageroy[index].classList.toggle("hidden");
-    chevron[index].classList.toggle("inverted");
+    const isHidden = catagories[index].classList.contains("hidden");
+
+    catagories.forEach((category, i) => {
+      category.classList.add("hidden");
+      chevron[i].classList.remove("inverted");
+    });
+
+    if (isHidden) {
+      catagories[index].classList.remove("hidden");
+      chevron[index].classList.add("inverted");
+    }
   });
 });

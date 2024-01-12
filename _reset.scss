@@ -279,7 +279,7 @@ header {
           left: 30%;
           width: auto;
           height: auto;
-          border-radius: 12px;
+          border-radius: 0 0 12px 12px;
           border: 1px solid var(--border-color);
         }
         @media screen and (min-width: 1024px) {
@@ -342,6 +342,7 @@ header {
             display: flex;
             flex-direction: column;
             gap: 12px;
+
             @media screen and (min-width: 768px) {
               position: absolute;
               transform: translateX(200px);
@@ -349,6 +350,7 @@ header {
               border: 1px solid var(--border-color);
               border-radius: 0 10px 10px 0;
               width: 200px;
+              min-height: 51px;
             }
           }
         }

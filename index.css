@@ -296,7 +296,7 @@ header .catalog-search-container .container .catalog-container {
     left: 30%;
     width: auto;
     height: auto;
-    border-radius: 12px;
+    border-radius: 0 0 12px 12px;
     border: 1px solid var(--border-color);
   }
 }
@@ -376,6 +376,7 @@ header .catalog-search-container .container .catalog-container .wrapper .categor
     border: 1px solid var(--border-color);
     border-radius: 0 10px 10px 0;
     width: 200px;
+    min-height: 51px;
   }
 }
 header .catalog-search-container .container .serach-bar {
