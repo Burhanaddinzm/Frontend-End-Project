@@ -379,6 +379,12 @@ header .catalog-search-container .container .catalog-container .wrapper .categor
     min-height: 51px;
   }
 }
+header .catalog-search-container .container .catalog-container .wrapper .category .subcategory {
+  display: flex;
+}
+header .catalog-search-container .container .catalog-container .wrapper .category .subcategory a {
+  flex-grow: 1;
+}
 header .catalog-search-container .container .serach-bar {
   border-radius: 9999px;
   border: 1px solid var(--border-color);

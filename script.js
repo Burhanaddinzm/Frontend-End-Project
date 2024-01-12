@@ -5,7 +5,7 @@ const menu = document.querySelector(".menu");
 
 const catalogBtn = document.querySelector(".catalog-btn");
 const catalogContainer = document.querySelector(".catalog-container");
-const catagories = document.querySelectorAll(".category");
+const categories = document.querySelectorAll(".category");
 const presentationWrapper = document.querySelectorAll(".presentation-wrapper");
 const chevron = document.querySelectorAll(".chevron");
 
@@ -58,15 +58,15 @@ catalogBtn.addEventListener("click", () => {
 
 presentationWrapper.forEach((wrapper, index) => {
   wrapper.addEventListener("click", () => {
-    const isHidden = catagories[index].classList.contains("hidden");
+    const isHidden = categories[index].classList.contains("hidden");
 
-    catagories.forEach((category, i) => {
+    categories.forEach((category, i) => {
       category.classList.add("hidden");
       chevron[i].classList.remove("inverted");
     });
 
     if (isHidden) {
-      catagories[index].classList.remove("hidden");
+      categories[index].classList.remove("hidden");
       chevron[index].classList.add("inverted");
     }
   });

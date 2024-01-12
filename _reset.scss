@@ -352,6 +352,13 @@ header {
               width: 200px;
               min-height: 51px;
             }
+
+            .subcategory {
+              display: flex;
+              a {
+                flex-grow: 1;
+              }
+            }
           }
         }
       }
