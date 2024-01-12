@@ -319,7 +319,6 @@ header {
           .chevron {
             width: 16px;
             height: 16px;
-            transition: all 0.4s ease-in-out;
             @media screen and (min-width: 768px) {
               transform: rotate(-90deg);
             }
@@ -331,7 +330,6 @@ header {
           flex-direction: column;
           .category {
             position: relative;
-            transition: all 0.4s ease-in-out;
             text-align: start;
             padding: 8px 0;
             margin-left: 20px;
