@@ -26,17 +26,14 @@ li {
 }
 
 body {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
   background: var(--bg-color-1);
   font-family: $font-family-2;
   position: relative;
   color: var(--color-1);
-}
 
-@media screen and (min-width: 1440px) {
-  body {
+  @media screen and (min-width: 1440px) {
     border-left: none;
     border-right: none;
   }
@@ -56,33 +53,26 @@ body {
 .container {
   width: 100%;
   padding: 0 1rem;
-}
 
-@media screen and (min-width: 425px) {
-  .container {
+  @media screen and (min-width: 425px) {
     max-width: calc(100% - 32px);
     margin: 0 auto;
     padding: 0;
   }
-}
 
-@media screen and (min-width: 768px) {
-  .container {
+  @media screen and (min-width: 768px) {
     max-width: 768px;
     padding: 0 2rem;
   }
-}
 
-@media screen and (min-width: 1024px) {
-  .container {
+  @media screen and (min-width: 1024px) {
     max-width: 1024px;
   }
-}
-@media screen and (min-width: 1440px) {
-  .container {
+
+  @media screen and (min-width: 1440px) {
     max-width: 1440px;
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
   }
 }
 
@@ -93,38 +83,33 @@ header {
   background: var(--bg-color-1);
 
   nav {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--border-color);
 
     @media screen and (min-width: 1440px) {
-      & {
-        border-bottom: none;
-      }
+      border-bottom: none;
     }
+
     .container {
       height: 4rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       @media screen and (min-width: 1440px) {
-        & {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        }
+        border-bottom: 1px solid var(--border-color);
       }
       .logo {
         .logo-span {
           display: none;
           font-size: 30px;
           font-weight: 700;
+          @media screen and (min-width: 1024px) {
+            display: block;
+          }
         }
         .logo-svg {
           width: 24px;
           height: 24px;
-        }
-        @media screen and (min-width: 1024px) {
-          .logo-span {
-            display: block;
-          }
-          .logo-svg {
+          @media screen and (min-width: 1024px) {
             display: none;
           }
         }
@@ -150,13 +135,33 @@ header {
           transform: rotate(180deg);
           cursor: pointer;
           z-index: 1;
+
+          &.open {
+            .bar:nth-child(1) {
+              width: 20px;
+              transform: translateY(200%) rotate(45deg);
+            }
+            .bar:nth-child(2) {
+              width: 20px;
+              transform: translateY(-100%) rotate(-45deg);
+              opacity: 0;
+            }
+            .bar:nth-child(3) {
+              transform: translateY(-250%) rotate(-45deg);
+            }
+          }
+
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
         }
 
         .burger-menu .bar {
-          background-color: #000;
+          background-color: var(--color-1);
           width: 20px;
           height: 3px;
           border-radius: 5px;
+          transition: all 0.4s linear;
         }
 
         .burger-menu .bar:nth-child(1) {
@@ -165,11 +170,6 @@ header {
 
         .burger-menu .bar:nth-child(2) {
           width: 16px;
-        }
-        @media screen and (min-width: 768px) {
-          .burger-menu {
-            display: none;
-          }
         }
       }
 
@@ -182,7 +182,7 @@ header {
         width: 88vw;
         padding: 16px;
         overflow: hidden;
-        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 1px solid var(--border-color);
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -195,21 +195,19 @@ header {
         z-index: 100000000;
 
         @media screen and (min-width: 768px) {
-          & {
-            position: static;
-            transform: translateX(0);
-            background: 0;
-            flex-direction: row;
-            padding: 0;
-            height: auto;
-            width: auto;
-            font-weight: 500;
-            border: none;
-            font-size: 14px;
-            justify-content: end;
-            li:first-child {
-              display: none;
-            }
+          position: static;
+          transform: translateX(0);
+          background: 0;
+          flex-direction: row;
+          padding: 0;
+          height: auto;
+          width: auto;
+          font-weight: 500;
+          border: none;
+          font-size: 14px;
+          justify-content: end;
+          li:first-child {
+            display: none;
           }
         }
       }
@@ -217,7 +215,7 @@ header {
   }
 
   .catalog-search-container {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--border-color);
     @media screen and (min-width: 1440px) {
       border-bottom: none;
     }
@@ -228,10 +226,9 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       @media screen and (min-width: 1440px) {
-        & {
-          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        }
+        border-bottom: 1px solid var(--border-color);
       }
 
       .catalog-btn {
@@ -252,9 +249,7 @@ header {
           font-weight: 700;
           display: none;
           @media screen and (min-width: 768px) {
-            & {
-              display: block;
-            }
+            display: block;
           }
         }
       }
@@ -269,23 +264,30 @@ header {
         background: var(--bg-color-1);
         width: 88vw;
         height: 100vh;
-        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 1px solid var(--border-color);
         font-weight: 600;
         transition: all 0.4s ease-in-out;
         z-index: 100000000;
         @media screen and (min-width: 768px) {
           position: absolute;
           top: 100%;
-          left: 24px;
+          left: 30%;
           width: auto;
           height: auto;
           border-radius: 12px;
-          border: 1px solid rgba(0, 0, 0, 0.2);
+          border: 1px solid var(--border-color);
         }
+        @media screen and (min-width: 1024px) {
+          left: 25%;
+        }
+        @media screen and (min-width: 1440px) {
+          left: 17%;
+        }
+
         h1 {
           padding-top: 10px;
           text-align: center;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          border-bottom: 1px solid var(--border-color);
           height: 65px;
           flex-shrink: 0;
           @media screen and (min-width: 768px) {
@@ -333,7 +335,7 @@ header {
             padding: 8px 0;
             margin-left: 20px;
             padding-left: 12px;
-            border-left: 1px solid rgba(0, 0, 0, 0.2);
+            border-left: 1px solid var(--border-color);
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -341,8 +343,8 @@ header {
               position: absolute;
               transform: translateX(200px);
               background: var(--bg-color-1);
-              border: 1px solid rgba(0, 0, 0, 0.2);
-              border-radius: 10px 10px 10px 0;
+              border: 1px solid var(--border-color);
+              border-radius: 0 10px 10px 0;
               width: 200px;
             }
           }
@@ -351,7 +353,7 @@ header {
 
       .serach-bar {
         border-radius: 9999px;
-        border: 1px solid rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--border-color);
         overflow: hidden;
         padding-left: 18px;
         width: calc(100% - 100px);
@@ -359,16 +361,16 @@ header {
         display: flex;
 
         @media screen and (min-width: 768px) {
-          max-width: 510px;
+          width: 510px;
         }
         @media screen and (min-width: 1024px) {
-          max-width: 460px;
+          width: 460px;
         }
-        @media screen and (min-width: 1024px) {
-          max-width: 460px;
+        @media screen and (min-width: 1280px) {
+          width: 590px;
         }
-        @media screen and (min-width: 1024px) {
-          max-width: 590px;
+        @media screen and (min-width: 1440px) {
+          width: 715px;
         }
 
         input {
@@ -442,7 +444,7 @@ footer {
       padding: 2rem;
     }
     @media screen and (min-width: 1440px) {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid var(--border-color);
     }
     .wrapper {
       display: flex;
@@ -465,7 +467,7 @@ footer {
     font-size: 12px;
     font-weight: 500;
     padding: 8px 16px;
-    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid var(--border-color);
     @media screen and (min-width: 1440px) {
       border: none;
     }
