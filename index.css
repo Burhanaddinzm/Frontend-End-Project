@@ -639,7 +639,7 @@ main .container .main-img .wrapper .intro-container .link-container .shop-link i
   height: 12px;
 }
 main .container .release-container {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   color: var(--color-2);
@@ -757,4 +757,116 @@ main .container .release-container .bottom-side .right-side img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main .container .subscription-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: var(--bg-color-3);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main .container .subscription-container {
+    padding: 2rem;
+  }
+}
+main .container .subscription-container h2 {
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  main .container .subscription-container h2 {
+    font-size: 36px;
+  }
+}
+main .container .subscription-container h1 {
+  margin-top: 4rem;
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  main .container .subscription-container h1 {
+    font-size: 48px;
+  }
+}
+main .container .subscription-container .top-side {
+  display: flex;
+  justify-content: space-between;
+}
+main .container .subscription-container .wrapper {
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  main .container .subscription-container .wrapper {
+    width: 340px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .container .subscription-container .wrapper {
+    width: 400px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .container .subscription-container .wrapper {
+    width: 510px;
+  }
+}
+main .container .subscription-container .wrapper .input-container {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-left: 20px;
+  border: 2px solid var(--bg-color-4);
+  border-radius: 2rem;
+  position: relative;
+}
+main .container .subscription-container .wrapper .input-container input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  outline: none;
+  font-weight: 500;
+}
+main .container .subscription-container .wrapper .input-container input::-moz-placeholder {
+  color: #adadad;
+}
+main .container .subscription-container .wrapper .input-container input::placeholder {
+  color: #adadad;
+}
+main .container .subscription-container .wrapper .input-container button {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  border: none;
+  background: var(--bg-color-4);
+  padding: 6px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  box-sizing: content-box;
+}
+main .container .subscription-container .wrapper .input-container button img {
+  width: 60%;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .subscription-container .wrapper p {
+  font-size: 14px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  main .container .subscription-container .wrapper p {
+    font-size: 16px;
+    margin-bottom: 5rem;
+  }
 }/*# sourceMappingURL=index.css.map */

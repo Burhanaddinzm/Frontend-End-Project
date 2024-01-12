@@ -130,7 +130,7 @@ main {
     // Main Image End
     // Release Container
     .release-container {
-      margin-top: 1rem;
+      margin-top: 2rem;
       display: flex;
       flex-direction: column;
       color: var(--color-2);
@@ -255,7 +255,119 @@ main {
       }
     }
     // Release Container End
+    // Subscription Container
+    .subscription-container {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      background: var(--bg-color-3);
+      border-radius: 1.5rem;
+      overflow: hidden;
+      text-align: center;
 
+      @media screen and (min-width: 768px) {
+        padding: 2rem;
+      }
+
+      h2 {
+        font-size: 20px;
+
+        @media screen and (min-width: 768px) {
+          font-size: 36px;
+        }
+      }
+
+      h1 {
+        margin-top: 4rem;
+        font-size: 24px;
+
+        @media screen and (min-width: 768px) {
+          font-size: 48px;
+        }
+      }
+
+      .top-side {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .wrapper {
+        margin-top: 40px;
+
+        @media screen and (min-width: 768px) {
+          width: 340px;
+          margin: 0 auto;
+          margin-top: 40px;
+        }
+
+        @media screen and (min-width: 1024px) {
+          width: 400px;
+        }
+
+        @media screen and (min-width: 1440px) {
+          width: 510px;
+        }
+
+        .input-container {
+          display: flex;
+          align-items: center;
+          height: 50px;
+          padding-left: 20px;
+          border: 2px solid var(--bg-color-4);
+          border-radius: 2rem;
+          position: relative;
+
+          input {
+            width: 100%;
+            border: none;
+            background: transparent;
+            font-size: 18px;
+            outline: none;
+            font-weight: 500;
+
+            &::placeholder {
+              color: #adadad;
+            }
+          }
+
+          button {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            border: none;
+            background: var(--bg-color-4);
+            padding: 6px;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            box-sizing: content-box;
+
+            img {
+              width: 60%;
+              height: 60%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        p {
+          font-size: 14px;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          font-weight: 500;
+
+          @media screen and (min-width: 768px) {
+            font-size: 16px;
+            margin-bottom: 5rem;
+          }
+        }
+      }
+    }
+    // Subscription Container End
     // Container End
   }
 }
