@@ -50,6 +50,10 @@ body {
   transform: rotate(180deg);
 }
 
+.open-menu {
+  transform: translateX(0) !important;
+}
+
 .container {
   width: 100%;
   padding: 0 1rem;

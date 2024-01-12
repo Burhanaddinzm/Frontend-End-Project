@@ -17,17 +17,17 @@ let isCatalogOpen = false;
 burgerMenu.addEventListener("click", () => {
   if (!isMenuOpen && !isCatalogOpen) {
     burgerMenu.classList.add("open");
-    menu.style.transform = "translateX(0)";
+    menu.classList.add("open-menu");
     isMenuOpen = true;
   } else {
     burgerMenu.classList.remove("open");
-    menu.style.transform = "translateX(-100%)";
+    menu.classList.remove("open-menu");
     isMenuOpen = false;
   }
 
   if (isCatalogOpen) {
     burgerMenu.classList.remove("open");
-    catalogContainer.style.transform = "translateX(-100%)";
+    catalogContainer.classList.remove("open-menu");
     catalogContainer.classList.add("hidden");
     isCatalogOpen = false;
   }
@@ -36,12 +36,12 @@ burgerMenu.addEventListener("click", () => {
 catalogBtn.addEventListener("click", () => {
   if (!isCatalogOpen) {
     burgerMenu.classList.add("open");
-    catalogContainer.style.transform = "translateX(0)";
+    catalogContainer.classList.add("open-menu");
     catalogContainer.classList.remove("hidden");
     isCatalogOpen = true;
   } else {
     burgerMenu.classList.remove("open");
-    catalogContainer.style.transform = "translateX(-100%)";
+    catalogContainer.classList.remove("open-menu");
     catalogContainer.classList.add("hidden");
     isCatalogOpen = false;
   }
