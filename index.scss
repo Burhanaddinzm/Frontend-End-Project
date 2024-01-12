@@ -117,6 +117,7 @@ main {
                 background: transparent;
               }
               img {
+                margin-top: 2px;
                 transition: all 0.4s linear;
                 width: 12px;
                 height: 12px;
@@ -127,6 +128,133 @@ main {
       }
     }
     // Main Image End
+    // Release Container
+    .release-container {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      color: var(--color-2);
+      gap: 1rem;
+      max-height: 100%;
+
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+        height: 700px;
+      }
+
+      img {
+        filter: brightness(75%);
+      }
+
+      h3 {
+        font-size: 24px;
+
+        @media screen and (min-width: 768px) {
+          font-size: 36px;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 600;
+
+        @media screen and (min-width: 768px) {
+          font-size: 16px;
+        }
+      }
+
+      .top-side {
+        width: 100%;
+        border-radius: 1rem;
+        overflow: hidden;
+        position: relative;
+        flex-grow: 1;
+
+        .text-container {
+          position: absolute;
+          bottom: 1rem;
+          left: 1rem;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .bottom-side {
+        flex-grow: 1;
+        display: flex;
+        gap: 1rem;
+
+        .left-side {
+          width: 100%;
+          position: relative;
+          flex-grow: 1;
+
+          @media screen and (min-width: 768px) {
+            height: 700px;
+          }
+
+          .wrapper {
+            position: relative;
+            height: 50%;
+            border-radius: 1rem;
+            overflow: hidden;
+
+            .text-container {
+              position: absolute;
+              bottom: 1rem;
+              left: 1rem;
+            }
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .coupon {
+            background: var(--bg-color-4);
+            margin-top: 1rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            padding: 1.5rem;
+            font-size: 18px;
+            height: 47%;
+
+            @media screen and (min-width: 768px) {
+              font-size: 36px;
+            }
+
+            span {
+              font-weight: 700;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .right-side {
+          width: 100%;
+          border-radius: 1rem;
+          overflow: hidden;
+          position: relative;
+          flex-grow: 1;
+
+          .text-container {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    // Release Container End
 
     // Container End
   }
