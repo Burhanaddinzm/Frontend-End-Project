@@ -2,7 +2,7 @@
 :root {
   --color-1: #000;
   --color-2: #fff;
-  --color-3: #969696;
+  --color-3: #6c6c6c;
   --bg-color-1: #fff;
   --bg-color-2: rgb(245, 245, 245);
   --bg-color-3: rgb(255, 220, 220);
@@ -23,7 +23,22 @@
   box-sizing: border-box;
 }
 
-button,
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--bg-color-4);
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color-3);
+}
+
 input,
 select,
 textarea {
@@ -59,6 +74,15 @@ body {
   visibility: hidden;
   width: 0;
   height: 0;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.disabled {
+  filter: saturate(0%) !important;
+  cursor: not-allowed !important;
 }
 
 .inverted {
@@ -269,6 +293,7 @@ header .catalog-search-container .container .catalog-btn span {
   font-size: 16px;
   font-weight: 700;
   display: none;
+  font-family: "Poppins", sans-serif;
 }
 @media screen and (min-width: 768px) {
   header .catalog-search-container .container .catalog-btn span {
