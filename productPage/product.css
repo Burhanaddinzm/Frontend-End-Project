@@ -517,4 +517,9 @@ footer p {
   footer p {
     border: none;
   }
+}
+
+main .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=product.css.map */

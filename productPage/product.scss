@@ -1,2 +1,9 @@
 @import "../colors";
 @import "../reset";
+
+main {
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

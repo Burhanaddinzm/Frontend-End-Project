@@ -552,8 +552,8 @@ main .container .brands-container .card-container {
   }
 }
 main .container .brands-container .card-container .card .img-container {
-  width: 150px;
-  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
   box-sizing: content-box;
   border: 2px solid var(--border-color);
   border-radius: 12px;
@@ -562,6 +562,8 @@ main .container .brands-container .card-container .card .img-container {
 }
 @media screen and (min-width: 768px) {
   main .container .brands-container .card-container .card .img-container {
+    max-width: 100%;
+    max-height: 100%;
     width: 100px;
     height: 100px;
   }
