@@ -39,6 +39,11 @@ burgerMenu.addEventListener("click", () => {
     catalogContainer.classList.remove("open-menu");
     catalogContainer.classList.add("hidden");
     isCatalogOpen = false;
+
+    categories.forEach((category, i) => {
+      category.classList.add("hidden");
+      chevron[i].classList.remove("inverted");
+    });
   }
 });
 
@@ -53,6 +58,11 @@ catalogBtn.addEventListener("click", () => {
     catalogContainer.classList.remove("open-menu");
     catalogContainer.classList.add("hidden");
     isCatalogOpen = false;
+
+    categories.forEach((category, i) => {
+      category.classList.add("hidden");
+      chevron[i].classList.remove("inverted");
+    });
   }
 });
 
