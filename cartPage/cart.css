@@ -376,7 +376,9 @@ header .catalog-search-container .container .catalog-container .wrapper .categor
     border: 1px solid var(--border-color);
     border-radius: 0 10px 10px 0;
     width: 200px;
-    min-height: 51px;
+    min-height: 57px;
+    display: flex;
+    justify-content: center;
   }
 }
 header .catalog-search-container .container .catalog-container .wrapper .category .subcategory {

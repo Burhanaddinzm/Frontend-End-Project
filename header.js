@@ -71,3 +71,24 @@ presentationWrapper.forEach((wrapper, index) => {
     }
   });
 });
+
+window.addEventListener("click", (e) => {
+  const clicked = e.target;
+  if (
+    !clicked.closest(".catalog-btn") &&
+    !catalogContainer.contains(clicked) &&
+    ![...categories].includes(clicked) &&
+    ![...presentationWrapper].includes(clicked) &&
+    ![...chevron].includes(clicked)
+  ) {
+    if (windowWidth >= 768) {
+      catalogContainer.classList.add("hidden");
+      isCatalogOpen = false;
+
+      categories.forEach((category, i) => {
+        category.classList.add("hidden");
+        chevron[i].classList.remove("inverted");
+      });
+    }
+  }
+});
