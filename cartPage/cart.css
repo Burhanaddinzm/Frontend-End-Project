@@ -560,10 +560,15 @@ main .container {
 }
 main .container .cart-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1rem;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 2rem;
+}
+@media screen and (min-width: 480px) {
+  main .container .cart-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (min-width: 768px) {
   main .container .cart-container {
@@ -576,8 +581,7 @@ main .container .cart-container {
   }
 }
 main .container .cart-container .cart-item {
-  max-width: 100%;
-  max-height: 100%;
+  display: grid;
 }
 @media screen and (min-width: 768px) {
   main .container .cart-container .cart-item {
