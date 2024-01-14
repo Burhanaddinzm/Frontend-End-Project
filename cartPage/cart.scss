@@ -189,6 +189,9 @@ main {
       }
 
       #clear-btn {
+        background: var(--bg-color-1);
+        border: 2px solid var(--bg-color-4);
+        
         &:hover {
           color: var(--color-2);
           background: var(--bg-color-4);

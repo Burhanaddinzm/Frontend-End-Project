@@ -722,6 +722,10 @@ main .container .order-container #order-btn img {
   width: 14px;
   height: 14px;
 }
+main .container .order-container #clear-btn {
+  background: var(--bg-color-1);
+  border: 2px solid var(--bg-color-4);
+}
 main .container .order-container #clear-btn:hover {
   color: var(--color-2);
   background: var(--bg-color-4);
