@@ -563,8 +563,20 @@ main .container .order-container {
   grid-template-columns: 1fr;
   gap: 20px;
 }
+@media screen and (min-width: 1024px) {
+  main .container .order-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 main .container .order-container .right-side {
   grid-row-start: 1;
+}
+@media screen and (min-width: 1024px) {
+  main .container .order-container .right-side {
+    grid-column-start: 2;
+    padding-left: 2.5rem;
+    border-left: 2px solid var(--border-color);
+  }
 }
 main .container .order-container .right-side h3 {
   font-size: 20px;
@@ -621,15 +633,15 @@ main .container .order-container .right-side .items-container .item .wrapper #it
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .container .order-container .right-side .items-container .item .right-side {
+main .container .order-container .right-side .items-container .item .price-container {
   padding-bottom: 2rem;
 }
-main .container .order-container .right-side .items-container .item .right-side #price-count {
+main .container .order-container .right-side .items-container .item .price-container #price-count {
   font-size: 14px;
   font-weight: 700;
 }
 main .container .order-container .right-side .totals-container {
-  margin-top: 4rem;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
 }
