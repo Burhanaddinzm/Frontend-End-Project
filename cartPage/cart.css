@@ -581,7 +581,8 @@ main .container .cart-container {
   }
 }
 main .container .cart-container .cart-item {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   main .container .cart-container .cart-item {
