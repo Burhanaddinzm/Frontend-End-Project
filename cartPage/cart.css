@@ -635,6 +635,12 @@ main .container .cart-container .cart-item .count-control {
   display: flex;
   align-items: center;
   gap: 1rem;
+  justify-content: center;
+}
+@media screen and (min-width: 480px) {
+  main .container .cart-container .cart-item .count-control {
+    justify-content: start;
+  }
 }
 main .container .cart-container .cart-item .count-control .wrapper {
   display: flex;
