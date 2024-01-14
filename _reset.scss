@@ -25,6 +25,15 @@ $font-family-2: "Poppins", sans-serif;
   }
 }
 
+//Input scroll disable
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
 input,
 select,
 textarea {
@@ -66,7 +75,7 @@ body {
 }
 
 .disabled {
-  filter: saturate(0%) !important;
+  opacity: 0.5 !important;
   cursor: not-allowed !important;
 }
 

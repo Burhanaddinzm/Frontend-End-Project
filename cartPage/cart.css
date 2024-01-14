@@ -39,6 +39,13 @@
   background: var(--bg-color-3);
 }
 
+@layer base {
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
 input,
 select,
 textarea {
@@ -81,7 +88,7 @@ body {
 }
 
 .disabled {
-  filter: saturate(0%) !important;
+  opacity: 0.5 !important;
   cursor: not-allowed !important;
 }
 
@@ -545,4 +552,166 @@ footer p {
   footer p {
     border: none;
   }
+}
+
+main .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+main .container .cart-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  main .container .cart-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .container .cart-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+main .container .cart-container .cart-item {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (min-width: 768px) {
+  main .container .cart-container .cart-item {
+    width: 224px;
+    height: 380px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .container .cart-container .cart-item {
+    width: 292px;
+    height: 448px;
+  }
+}
+main .container .cart-container .cart-item #item-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+main .container .cart-container .cart-item #item-img img {
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .cart-container .cart-item .item-info {
+  margin-top: 1rem;
+  padding: 16px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.2s linear;
+}
+main .container .cart-container .cart-item .item-info:hover {
+  border-color: var(--bg-color-3);
+}
+main .container .cart-container .cart-item .item-info #brand {
+  color: var(--color-3);
+  font-size: 12px;
+  font-weight: 500;
+}
+main .container .cart-container .cart-item .item-info #name {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-1);
+}
+main .container .cart-container .cart-item .count-control {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .container .cart-container .cart-item .count-control .wrapper {
+  display: flex;
+  gap: 1rem;
+  border-right: 1px solid var(--border-color);
+  box-sizing: content-box;
+  padding: 1rem;
+}
+main .container .cart-container .cart-item .count-control .wrapper button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s linear;
+}
+main .container .cart-container .cart-item .count-control .wrapper button:hover {
+  background: var(--bg-color-3);
+}
+main .container .cart-container .cart-item .count-control .wrapper #count {
+  border-radius: 8px;
+  width: 2rem;
+  height: 2rem;
+  padding-left: 8px;
+  border-width: 1px;
+  font-weight: 700;
+}
+main .container .cart-container .cart-item .count-control #remove {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-sizing: content-box;
+  filter: invert(var(--arrow-filter1)) sepia(var(--arrow-filter2)) saturate(var(--arrow-filter3)) hue-rotate(var(--arrow-filter4)) brightness(var(--arrow-filter5)) contrast(var(--arrow-filter6));
+  transition: all 0.2s linear;
+}
+main .container .cart-container .cart-item .count-control #remove:hover {
+  filter: none;
+  background: var(--bg-color-3);
+}
+main .container .cart-container .cart-item .count-control #remove img {
+  width: 12px;
+  height: 12px;
+}
+main .container .order-container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+main .container .order-container button {
+  padding: 0.5rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 9999px;
+  transition: all 0.2s linear;
+}
+main .container .order-container #order-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-color: transparent;
+  filter: invert(var(--arrow-filter1)) sepia(var(--arrow-filter2)) saturate(var(--arrow-filter3)) hue-rotate(var(--arrow-filter4)) brightness(var(--arrow-filter5)) contrast(var(--arrow-filter6));
+}
+main .container .order-container #order-btn:hover {
+  filter: none;
+  background: var(--bg-color-3);
+}
+main .container .order-container #order-btn img {
+  width: 14px;
+  height: 14px;
+}
+main .container .order-container #clear-btn:hover {
+  color: var(--color-2);
+  background: var(--bg-color-4);
 }/*# sourceMappingURL=cart.css.map */

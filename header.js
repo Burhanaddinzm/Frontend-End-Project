@@ -92,6 +92,7 @@ window.addEventListener("click", (e) => {
     ![...chevron].includes(clicked)
   ) {
     if (windowWidth >= 768) {
+      burgerMenu.classList.remove("open");
       catalogContainer.classList.add("hidden");
       isCatalogOpen = false;
 
