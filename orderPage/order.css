@@ -724,6 +724,7 @@ main .container .order-container .left-side form .checkbox-container {
 main .container .order-container .left-side form .checkbox-container label {
   font-size: 14px;
   font-weight: 700;
+  cursor: pointer;
 }
 main .container .order-container .left-side form button {
   margin-top: 1rem;
