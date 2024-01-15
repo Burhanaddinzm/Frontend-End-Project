@@ -13,6 +13,9 @@ main {
     padding-bottom: 2rem;
 
     .main-section {
+      display: flex;
+      gap: 2rem;
+
       .right-side {
         .sorting-container {
           background: #f1f1f1;
@@ -21,8 +24,6 @@ main {
           border: 1px solid var(--border-color) !important;
           position: relative;
           border: none;
-          //   border-radius: 12px 12px 0 0;
-          //   border-bottom: none;
 
           @media screen and (min-width: 1024px) {
             width: fit-content;
@@ -39,7 +40,6 @@ main {
             border: none;
             color: var(--color-1);
             width: 100%;
-            // border-bottom: 1px solid var(--border-color);
 
             h2 {
               font-size: 14px;
@@ -79,6 +79,62 @@ main {
               }
             }
           }
+        }
+
+        .products-container {
+          margin-top: 1.5rem;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+
+          @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(4, 1fr);
+          }
+
+          .product {
+            display: flex;
+            flex-direction: column;
+
+            #product-img {
+              aspect-ratio: 1/1;
+              border-radius: 12px;
+              overflow: hidden;
+              border: 2px solid var(--border-color);
+              transition: all 0.2s linear;
+
+              &:hover {
+                border-color: var(--bg-color-3);
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+
+            p {
+              margin-top: 0.5rem;
+              font-size: 12px;
+              font-weight: 500;
+            }
+
+            span {
+              margin-top: 0.5rem;
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .filters-container {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media screen and (min-width: 1024px) {
+          display: flex;
         }
       }
     }

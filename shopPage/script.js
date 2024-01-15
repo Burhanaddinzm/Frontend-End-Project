@@ -4,7 +4,7 @@ const sortingContainer = document.querySelector(".sorting-container");
 const sortingBtn = document.getElementById("sorting-btn");
 const sortingCategories = document.getElementById("sorting-categories");
 
-const sortNewestBtn = document.getElementById("sort-newest-btn");
+const sortDefaultBtn = document.getElementById("sort-default-btn");
 const sortLowtHighBtn = document.getElementById("sort-lowt-high-btn");
 const sortHightLowBtn = document.getElementById("sort-hight-low-btn");
 
