@@ -102,10 +102,10 @@ main {
           display: flex;
           flex-direction: column;
 
-          .sub-total-container {
+          .wrapper {
             display: flex;
             justify-content: space-between;
-            padding: 1rem 0;
+            padding-bottom: 1rem;
 
             p {
               font-size: 16px;
@@ -138,6 +138,85 @@ main {
       }
 
       .left-side {
+        h1 {
+          font-size: 36px;
+          font-weight: 700;
+          color: var(--color-1);
+        }
+
+        form {
+          margin-top: 2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label {
+              font-size: 14px;
+              font-weight: 500;
+              color: var(--color-1);
+
+              span {
+                color: red;
+              }
+            }
+
+            input {
+              padding: 0.5rem 1rem;
+              font-size: 16px;
+              border: 2px solid var(--border-color);
+              border-radius: 9999px;
+            }
+          }
+
+          .location {
+            margin-top: 0.5rem;
+          }
+
+          .main-part {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+
+            @media screen and (min-width: 768px) {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+
+          .checkbox-container {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+
+            label {
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+
+          button {
+            margin-top: 1rem;
+            padding: 10px 28px;
+            max-width: 166px;
+            font-size: 14px;
+            font-weight: 700;
+            background: var(--bg-color-4);
+            color: var(--color-2);
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.2s linear;
+            border: none;
+
+            &:hover {
+              background: var(--bg-color-3);
+              color: var(--color-1);
+            }
+          }
+        }
       }
     }
   }

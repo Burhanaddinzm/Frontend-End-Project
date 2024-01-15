@@ -232,7 +232,52 @@
     <main>
       <div class="container">
         <div class="order-container">
-          <div class="left-side"></div>
+          <div class="left-side">
+            <h1>Müştəri məlumatları</h1>
+
+            <form id="order-form" action="">
+              <div class="main-part">
+                <div class="input-container">
+                  <label for="name">Ad <span>*</span></label>
+                  <input id="name" form="order-form" type="text" />
+                </div>
+
+                <div class="input-container">
+                  <label for="surname">Soyad <span>*</span></label>
+                  <input id="surname" type="text" form="order-form" />
+                </div>
+
+                <div class="input-container">
+                  <label for="email">Email <span>*</span></label>
+                  <input id="email" type="email" form="order-form" />
+                </div>
+
+                <div class="input-container">
+                  <label for="contact-number"
+                    >Əlaqə Nömrəsi <span>*</span></label
+                  >
+                  <input
+                    id="contact-number"
+                    value="+994 "
+                    type="text"
+                    form="order-form"
+                  />
+                </div>
+              </div>
+
+              <div class="input-container location">
+                <label for="location">Ünvan <span>(Seçimlik)*</span></label>
+                <input id="location" type="text" form="order-form" />
+              </div>
+
+              <div class="checkbox-container">
+                <input id="checkbox" type="checkbox" form="order-form" />
+                <label for="checkbox">Bu ünvana çatdırılacaq (AZN 5.00)</label>
+              </div>
+
+              <button disabled class="disabled" form="order-form" type="submit">Sifarişi təsdiqlə</button>
+            </form>
+          </div>
 
           <div class="right-side">
             <h3>Sifariş detalları</h3>
@@ -374,9 +419,13 @@
             </div>
 
             <div class="totals-container">
-              <div class="sub-total-container">
+              <div class="wrapper">
                 <p>Cəm</p>
-                <span id="sub-total">AZN 1,115.00</span>
+                <span id="subtotal">AZN 1,115.00</span>
+              </div>
+              <div class="wrapper">
+                <p>Çatdırılma</p>
+                <span id="delivery-fee">AZN 0.00</span>
               </div>
               <div class="total-container">
                 <p>Ümumi</p>
