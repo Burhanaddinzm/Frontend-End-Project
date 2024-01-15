@@ -266,7 +266,9 @@
               </div>
 
               <div class="input-container location">
-                <label for="location">Ünvan <span>(Seçimlik)*</span></label>
+                <label for="location"
+                  >Ünvan <span class="location-span">(Seçimlik)</span></label
+                >
                 <input id="location" type="text" form="order-form" />
               </div>
 
@@ -275,7 +277,15 @@
                 <label for="checkbox">Bu ünvana çatdırılacaq (AZN 5.00)</label>
               </div>
 
-              <button disabled class="disabled" form="order-form" type="submit">Sifarişi təsdiqlə</button>
+              <button
+                id="submit-btn"
+                disabled
+                class="disabled"
+                form="order-form"
+                type="submit"
+              >
+                Sifarişi təsdiqlə
+              </button>
             </form>
           </div>
 
@@ -502,5 +512,6 @@
     <!-- Footer End -->
     <!-- Script -->
     <script src="../header.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

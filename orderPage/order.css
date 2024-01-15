@@ -41,7 +41,7 @@
 
 @layer base {
   input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+  input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -131,7 +131,6 @@ body {
 }
 
 header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: var(--bg-color-1);
@@ -705,6 +704,9 @@ main .container .order-container .left-side form .input-container input {
 }
 main .container .order-container .left-side form .location {
   margin-top: 0.5rem;
+}
+main .container .order-container .left-side form .location .location-span {
+  color: var(--color-1);
 }
 main .container .order-container .left-side form .main-part {
   display: grid;

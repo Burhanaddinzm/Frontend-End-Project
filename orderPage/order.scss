@@ -175,6 +175,10 @@ main {
 
           .location {
             margin-top: 0.5rem;
+
+            .location-span {
+              color: var(--color-1);
+            }
           }
 
           .main-part {
@@ -211,7 +215,6 @@ main {
             cursor: pointer;
             transition: all 0.2s linear;
             border: none;
-
 
             &:hover {
               background: var(--bg-color-3);
