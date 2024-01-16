@@ -5,6 +5,10 @@ button {
   font-family: $font-family-2;
 }
 
+.active-page {
+  background: var(--bg-color-3) !important;
+}
+
 // Shop Main
 
 main {
@@ -148,7 +152,7 @@ main {
           font-size: 16px;
           font-weight: 700;
           width: 100%;
-          transition: all 0.2s linear;
+          transition: background-color 0.2s linear;
 
           span {
             font-size: 18px;
@@ -166,7 +170,51 @@ main {
           flex-direction: column;
           gap: 1rem;
 
-          .categories-filter-wrapper {
+          // 1
+          .filter-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-width: 220px;
+            background: var(--bg-color-1);
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            // 2
+
+            // filterWrapper.style.borderRadius = "12px";
+            // filterBtn.style.borderBottom = "1px solid var(--border-color)";
+            // filterBtn.style.backgroundColor = "var(--bg-color-3)";
+            // filtersPlusMinus.textContent = "-";
+            // categoriesFilterUl.classList.remove("display-none");
+            #filter-btn {
+              background: var(--bg-color-2);
+              // background-color: var(--bg-color-3);
+
+              &:hover {
+                background: var(--bg-color-3) !important;
+              }
+            }
+            // 3
+            #categories-filter-ul {
+              button {
+                font-weight: 500;
+                font-size: 14px;
+              }
+
+              img {
+                width: 12px;
+                height: 12px;
+                object-fit: cover;
+              }
+              // 4
+              #subcategories-filter-ul {
+                margin-left: 12px;
+                border-left: 1px solid var(--border-color);
+              }
+            }
+          }
+
+          .filter-wrapper.open-filter {
             display: flex;
             flex-direction: column;
             min-width: 220px;
@@ -175,10 +223,9 @@ main {
             overflow: hidden;
             border: 1px solid var(--border-color);
 
-            #categories-filter-btn {
-              // background: var(--bg-color-2);
+            #filter-btn {
               background-color: var(--bg-color-3);
-
+              border-bottom: 1px solid var(--border-color);
               &:hover {
                 background: var(--bg-color-3) !important;
               }
@@ -220,7 +267,7 @@ main {
           border-radius: 24px;
           overflow: hidden;
           border: 1px solid var(--border-color);
-          transition: all 0.2s linear;
+          transition: background-color 0.2s linear;
 
           img {
             width: 12px;
@@ -231,6 +278,29 @@ main {
           &:hover {
             background: var(--bg-color-3);
           }
+        }
+      }
+    }
+
+    .page-navigation {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+
+      button {
+        border-radius: 9999px;
+        border: 2px solid #000;
+        cursor: pointer;
+        padding: 0.25rem 0.75rem;
+        font-size: 14px;
+        font-weight: 600;
+        background: var(--bg-color-1);
+
+        &:hover {
+          background: var(--bg-color-2);
         }
       }
     }

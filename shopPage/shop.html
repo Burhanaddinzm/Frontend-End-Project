@@ -236,11 +236,30 @@
           <div class="filters-container">
             <div class="filters">
               <!-- Categories filter -->
-              <div class="categories-filter-wrapper">
-                <button id="categories-filter-btn">
-                  Kateqoriyalar <span id="filters-btn-plus-minus">-</span>
+              <div class="filter-wrapper open-filter">
+                <button id="filter-btn">
+                  Kateqoriyalar <span id="filters-plus-minus">-</span>
                 </button>
                 <ul id="categories-filter-ul">
+                  <li>
+                    <button class="category-btn">
+                      Ayaqqabı
+                      <img src="../assets/icons/chevron.svg" alt="" />
+                    </button>
+                    <ul class="display-none" id="subcategories-filter-ul">
+                      <li>
+                        <button>İdman ayaqqabısı</button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="filter-wrapper">
+                <button id="filter-btn">
+                  Kateqoriyalar <span id="filters-plus-minus">+</span>
+                </button>
+                <ul class="display-none" id="categories-filter-ul">
                   <li>
                     <button class="category-btn">
                       Ayaqqabı
@@ -383,7 +402,13 @@
         </div>
         <!-- Main Section End -->
         <!-- Page Nav -->
-        <div class="page-navigation"></div>
+        <div class="page-navigation">
+          <button disabled class="disabled" id="prev-page">Əvvəlki</button>
+          <button class="active-page" id="page-btn">1</button>
+          <button id="page-btn">2</button>
+          <button id="page-btn">3</button>
+          <button id="next-page">Növbəti</button>
+        </div>
         <!-- Page Nav End -->
       </div>
     </main>
