@@ -567,7 +567,7 @@ main .container .main-section {
   gap: 2rem;
 }
 main .container .main-section .right-side .sorting-container {
-  background: #f1f1f1;
+  background: var(--bg-color-2);
   width: 100%;
   border-radius: 9999px;
   border: 1px solid var(--border-color) !important;
@@ -607,7 +607,7 @@ main .container .main-section .right-side .sorting-container ul {
   position: absolute;
   top: 100%;
   left: -1px;
-  background: #f1f1f1;
+  background: var(--bg-color-2);
   width: calc(100% + 2px);
   border-radius: 0 0 12px 12px;
   border: 1px solid var(--border-color);
@@ -676,4 +676,86 @@ main .container .main-section .filters-container {
   main .container .main-section .filters-container {
     display: flex;
   }
+}
+main .container .main-section .filters-container button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  transition: all 0.2s linear;
+}
+main .container .main-section .filters-container button span {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-1);
+}
+main .container .main-section .filters-container button:hover {
+  background: var(--bg-color-2);
+}
+main .container .main-section .filters-container .filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .container .main-section .filters-container .filters .categories-filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  background: var(--bg-color-1);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-btn {
+  background: var(--bg-color-2);
+}
+main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-btn:hover {
+  background: var(--bg-color-3);
+}
+main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-ul button {
+  font-weight: 500;
+  font-size: 14px;
+}
+main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-ul img {
+  width: 12px;
+  height: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-ul #subcategories-ul {
+  margin-left: 12px;
+  border-left: 1px solid var(--border-color);
+}
+main .container .main-section .filters-container #clear-filters {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  min-width: 220px;
+  background: var(--bg-color-2);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s linear;
+}
+main .container .main-section .filters-container #clear-filters img {
+  width: 12px;
+  height: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .main-section .filters-container #clear-filters:hover {
+  background: var(--bg-color-3);
 }/*# sourceMappingURL=shop.css.map */

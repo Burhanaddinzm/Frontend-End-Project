@@ -235,22 +235,30 @@
         <div class="main-section">
           <div class="filters-container">
             <div class="filters">
-              <div class="categories-filter">
-                <button id="categories-filter-btn"></button>
+              <!-- Categories filter -->
+              <div class="categories-filter-wrapper">
+                <button id="categories-filter-btn">
+                  Kateqoriyalar <span id="filters-btn-plus-minus">+</span>
+                </button>
                 <ul id="categories-filter-ul">
                   <li>
+                    <button id="shoe-category">
+                      Ayaqqabı
+                      <img  src="../assets/icons/chevron.svg" alt="" />
+                    </button>
                     <ul id="subcategories-ul">
                       <li>
-                        <button></button>
+                        <button>İdman ayaqqabısı</button>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </div>
+              <!-- Categories filter end -->
             </div>
 
             <button id="clear-filters">
-              Clear Filter
+              Clear filters
               <img src="../assets/icons/clean-filter.svg" alt="" />
             </button>
           </div>
