@@ -713,7 +713,7 @@ main .container .main-section .filters-container .filters .categories-filter-wra
   border: 1px solid var(--border-color);
 }
 main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-btn {
-  background: var(--bg-color-2);
+  background-color: var(--bg-color-3);
 }
 main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-btn:hover {
   background: var(--bg-color-3);
@@ -728,7 +728,7 @@ main .container .main-section .filters-container .filters .categories-filter-wra
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-ul #subcategories-ul {
+main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-ul #subcategories-filter-ul {
   margin-left: 12px;
   border-left: 1px solid var(--border-color);
 }

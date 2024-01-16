@@ -176,7 +176,8 @@ main {
             border: 1px solid var(--border-color);
 
             #categories-filter-btn {
-              background: var(--bg-color-2);
+              // background: var(--bg-color-2);
+              background-color: var(--bg-color-3);
 
               &:hover {
                 background: var(--bg-color-3);
@@ -195,7 +196,7 @@ main {
                 object-fit: cover;
               }
 
-              #subcategories-ul {
+              #subcategories-filter-ul {
                 margin-left: 12px;
                 border-left: 1px solid var(--border-color);
               }
