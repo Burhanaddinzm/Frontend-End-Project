@@ -180,7 +180,7 @@ main {
               background-color: var(--bg-color-3);
 
               &:hover {
-                background: var(--bg-color-3);
+                background: var(--bg-color-3) !important;
               }
             }
 

@@ -716,7 +716,7 @@ main .container .main-section .filters-container .filters .categories-filter-wra
   background-color: var(--bg-color-3);
 }
 main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-btn:hover {
-  background: var(--bg-color-3);
+  background: var(--bg-color-3) !important;
 }
 main .container .main-section .filters-container .filters .categories-filter-wrapper #categories-filter-ul button {
   font-weight: 500;
