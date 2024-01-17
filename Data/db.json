@@ -30,7 +30,10 @@
       "colors": ["red", "white"],
       "sizes": ["Medium"],
       "price": 300.0,
-      "description": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+      "stock": 20,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
       "id": 2,
@@ -49,7 +52,10 @@
       "colors": [],
       "sizes": [],
       "price": 190.0,
-      "description": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
       "id": 3,
@@ -68,7 +74,10 @@
       "colors": [],
       "sizes": [],
       "price": 200.0,
-      "description": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+      "stock": 1,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
       "id": 4,
@@ -85,7 +94,236 @@
       "colors": [],
       "sizes": [],
       "price": 270.0,
-      "description": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+      "stock": 5,
+      "onsale": true,
+      "discount": 20,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 5,
+      "name": "Lancome Idole hədiyə seti",
+      "brand": "Lancome",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Lancome Idole hədiyə seti/product-image-0.webp",
+          "../assets/images/product-images/Lancome Idole hədiyə seti/product-image-1.webp",
+          "../assets/images/product-images/Lancome Idole hədiyə seti/product-image-2.jpg"
+        ]
+      },
+      "category": "Parfümeriya",
+      "subcategory": "Ətir seti",
+      "colors": [],
+      "sizes": [],
+      "price": 250.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 6,
+      "name": "Pinko çanta",
+      "brand": "Pinko",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Pinko çanta/product-image-0.jpg",
+          "../assets/images/product-images/Pinko çanta/product-image-1.webp",
+          "../assets/images/product-images/Pinko çanta/product-image-2.jpg",
+          "../assets/images/product-images/Pinko çanta/product-image-3.jpg"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Crossbody çanta",
+      "colors": [],
+      "sizes": [],
+      "price": 350.0,
+      "stock": 100,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 7,
+      "name": "Armani Exchange saat",
+      "brand": "Armani Exchange",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Armani Exchange saat/product-image-0.jpg",
+          "../assets/images/product-images/Armani Exchange saat/product-image-1.jpg",
+          "../assets/images/product-images/Armani Exchange saat/product-image-2.webp",
+          "../assets/images/product-images/Armani Exchange saat/product-image-3.jpg",
+          "../assets/images/product-images/Armani Exchange saat/product-image-4.jpg",
+          "../assets/images/product-images/Armani Exchange saat/product-image-5.webp"
+        ]
+      },
+      "category": "Aksesuar",
+      "subcategory": "Saat",
+      "colors": [],
+      "sizes": [],
+      "price": 300.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 8,
+      "name": "Bally cüzdan",
+      "brand": "Bally",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Bally cüzdan/product-image-0.jpg",
+          "../assets/images/product-images/Bally cüzdan/product-image-1.jpg",
+          "../assets/images/product-images/Bally cüzdan/product-image-2.jpg",
+          "../assets/images/product-images/Bally cüzdan/product-image-3.jpg"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Cüzdan",
+      "colors": [],
+      "sizes": [],
+      "price": 300.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 9,
+      "name": "Charles&Keith çanta",
+      "brand": "Charles&Keith",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Charles&Keith çanta/product-image-0.jpg",
+          "../assets/images/product-images/Charles&Keith çanta/product-image-1.jpg",
+          "../assets/images/product-images/Charles&Keith çanta/product-image-2.jpg",
+          "../assets/images/product-images/Charles&Keith çanta/product-image-3.jpg",
+          "../assets/images/product-images/Charles&Keith çanta/product-image-4.jpg",
+          "../assets/images/product-images/Charles&Keith çanta/product-image-5.jpg",
+          "../assets/images/product-images/Charles&Keith çanta/product-image-6.jpg",
+          "../assets/images/product-images/Charles&Keith çanta/product-image-7.webp"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Crossbody çanta",
+      "colors": [],
+      "sizes": [],
+      "price": 125.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 10,
+      "name": "Charles&Keith çanta",
+      "brand": "Charles&Keith",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Charles&Keith çanta-2/product-image-0.png",
+          "../assets/images/product-images/Charles&Keith çanta-2/product-image-1.png",
+          "../assets/images/product-images/Charles&Keith çanta-2/product-image-2.png",
+          "../assets/images/product-images/Charles&Keith çanta-2/product-image-3.png",
+          "../assets/images/product-images/Charles&Keith çanta-2/product-image-4.png",
+          "../assets/images/product-images/Charles&Keith çanta-2/product-image-5.png"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Əl çantası",
+      "colors": [],
+      "sizes": [],
+      "price": 175.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 11,
+      "name": "Charles&Keith çanta",
+      "brand": "Charles&Keith",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Charles&Keith çanta-3/product-image-0.webp",
+          "../assets/images/product-images/Charles&Keith çanta-3/product-image-1.jpg",
+          "../assets/images/product-images/Charles&Keith çanta-3/product-image-2.jpg",
+          "../assets/images/product-images/Charles&Keith çanta-3/product-image-3.jpg",
+          "../assets/images/product-images/Charles&Keith çanta-3/product-image-4.jpg"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Crossbody çanta",
+      "colors": [],
+      "sizes": [],
+      "price": 165.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 12,
+      "name": "Charles&Keith çanta",
+      "brand": "Charles&Keith",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Charles&Keith çanta-4/product-image-0.jpg",
+          "../assets/images/product-images/Charles&Keith çanta-4/product-image-1.jpg",
+          "../assets/images/product-images/Charles&Keith çanta-4/product-image-2.webp",
+          "../assets/images/product-images/Charles&Keith çanta-4/product-image-3.jpg"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Crossbody çanta",
+      "colors": [],
+      "sizes": [],
+      "price": 165.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 13,
+      "name": "Canta",
+      "brand": "U.S POLO ASSN.",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Çanta/product-image-0.webp",
+          "../assets/images/product-images/Çanta/product-image-1.webp"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Crossbody çanta",
+      "colors": [],
+      "sizes": [],
+      "price": 85.0,
+      "stock": 0,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 14,
+      "name": "Gödəkcə",
+      "brand": "U.S POLO ASSN.",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Gödəkcə/product-image-0.webp",
+          "../assets/images/product-images/Gödəkcə/product-image-1.webp",
+          "../assets/images/product-images/Gödəkcə/product-image-2.webp",
+          "../assets/images/product-images/Gödəkcə/product-image-3.webp"
+        ]
+      },
+      "category": "Geyim",
+      "subcategory": "Gödəkcə",
+      "colors": [],
+      "sizes": ["M"],
+      "price": 100.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     }
   ]
 }
