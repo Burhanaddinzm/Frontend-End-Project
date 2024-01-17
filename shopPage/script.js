@@ -72,14 +72,17 @@ const paginate = (data, itemsPerPage) => {
 // Page Handler
 const handlePage = (pages) => {
   let pageIndex = 0;
+
   displayProducts(pages[pageIndex]);
-  
+
   pageNavigation.innerHTML = "";
 
   for (let i = 0; i < pages.length; i++) {
     pageNavigation.innerHTML += `
     <button data-page="${i}" id="page-btn">${i + 1}</button>`;
   }
+
+  const pageButtons = document.querySelectorAll("#page-btn");
 
   const previousBtn = document.createElement("button");
   previousBtn.id = "prev-page";
@@ -108,26 +111,40 @@ const handlePage = (pages) => {
 
   previousBtn.addEventListener("click", () => {
     pageIndex--;
+    activatePageButton(pageIndex);
     displayProducts(pages[pageIndex]);
     disableButton(pageIndex);
   });
 
   nextBtn.addEventListener("click", () => {
     pageIndex++;
+    activatePageButton(pageIndex);
     displayProducts(pages[pageIndex]);
     disableButton(pageIndex);
   });
 
-  const pageButtons = document.querySelectorAll("#page-btn");
+  const activatePageButton = (pageIndex) => {
+    pageButtons.forEach((button) => {
+      button.classList.remove("active-page");
+    });
 
+    const buttonToActivate = pageButtons[pageIndex];
+    if (buttonToActivate) {
+      buttonToActivate.classList.add("active-page");
+    }
+  };
   pageButtons.forEach((button) => {
     button.addEventListener("click", () => {
       pageIndex = parseInt(button.dataset.page);
+
+      activatePageButton(pageIndex);
+
       displayProducts(pages[pageIndex]);
       disableButton(pageIndex);
     });
   });
 
+  activatePageButton(pageIndex);
   disableButton(pageIndex);
 };
 
