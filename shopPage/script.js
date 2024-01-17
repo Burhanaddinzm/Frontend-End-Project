@@ -74,19 +74,23 @@ const fetchData = async () => {
 
 // Display Products
 const displayProducts = (products) => {
+  let mainImage;
+
   productsContainer.innerHTML = "";
 
   products.forEach((product) => {
+    if (product.colors.length === 0) {
+      mainImage = Object.values(product.images.default)[0];
+    } else {
+      mainImage = Object.values(product.images).flat()[0];
+    }
+
     productsContainer.innerHTML += `
     <a href="../productPage/product.html">
-    <div data-${product.id} class="product">
+    <div data-id="${product.id}" class="product">
       <div id="product-img">
         <img
-          src="${
-            product.colors.length === 0
-              ? Object.values(product.images.default)[0]
-              : Object.values(product.images.white)[0]
-          }"
+          src="${mainImage}"
           alt=""
         />
       </div>
@@ -99,5 +103,18 @@ const displayProducts = (products) => {
 
 // Handle Pages
 const handlePages = () => {};
+
+window.addEventListener("click", (e) => {
+  const clicked = e.target;
+
+  // productID
+  if (clicked.closest(".product")) {
+    const selectedProductId = clicked.closest(".product").dataset.id;
+    localStorage.setItem(
+      "selectedProductId",
+      JSON.stringify(selectedProductId)
+    );
+  }
+});
 
 fetchData();
