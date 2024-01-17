@@ -1,0 +1,77 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Emporio Armani shopper bag",
+      "brand": "Emporio Armani",
+      "images": {
+        "red": [
+          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-0.webp",
+          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-1.webp",
+          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-2.webp",
+          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-3.webp",
+          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-4.webp",
+          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-5.webp",
+          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-6.webp",
+          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-7.webp",
+          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-8.webp"
+        ],
+        "white": [
+          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-0.jpg",
+          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-1.png",
+          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-2.png",
+          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-3.png",
+          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-4.png",
+          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-5.png"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Əl çantası",
+      "colors": ["red", "white"],
+      "sizes": ["Medium"],
+      "price": 300.0,
+      "description": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 2,
+      "name": "Michael Kors çanta",
+      "brand": "Michael Kors",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Michael Kors çanta/product-image-0.jpg",
+          "../assets/images/product-images/Michael Kors çanta/product-image-1.jpg",
+          "../assets/images/product-images/Michael Kors çanta/product-image-2.jpg",
+          "../assets/images/product-images/Michael Kors çanta/product-image-3.jpg"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Crossbody çanta",
+      "colors": [],
+      "sizes": [],
+      "price": 190.0,
+      "description": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 3,
+      "name": "Valentino çanta",
+      "brand": "Valentino",
+      "category": "Çanta",
+      "subcategory": "Crossbody çanta",
+      "colors": [],
+      "sizes": [],
+      "price": 200.0,
+      "description": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 4,
+      "name": "Versace hədiyə seti",
+      "brand": "Versace",
+      "category": "Parfümeriya",
+      "subcategory": "Ətir seti",
+      "colors": [],
+      "sizes": [],
+      "price": 270.0,
+      "description": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    }
+  ]
+}
