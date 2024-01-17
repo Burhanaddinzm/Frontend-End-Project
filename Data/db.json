@@ -6,23 +6,23 @@
       "brand": "Emporio Armani",
       "images": {
         "red": [
-          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-0.webp",
-          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-1.webp",
-          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-2.webp",
-          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-3.webp",
-          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-4.webp",
-          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-5.webp",
-          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-6.webp",
-          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-7.webp",
-          "../assets/images/product-images/Emporio Armani shopper bag-red/product-image-8.webp"
+          "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-0.webp",
+          "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-1.webp",
+          "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-2.webp",
+          "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-3.webp",
+          "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-4.webp",
+          "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-5.webp",
+          "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-6.webp",
+          "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-7.webp",
+          "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-8.webp"
         ],
         "white": [
-          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-0.jpg",
-          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-1.png",
-          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-2.png",
-          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-3.png",
-          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-4.png",
-          "../assets/images/product-images/Emporio Armani shopper bag-white/product-image-5.png"
+          "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-0.jpg",
+          "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-1.png",
+          "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-2.png",
+          "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-3.png",
+          "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-4.png",
+          "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-5.png"
         ]
       },
       "category": "Çanta",
@@ -41,10 +41,10 @@
       "brand": "Michael Kors",
       "images": {
         "default": [
-          "../assets/images/product-images/Michael Kors çanta/product-image-0.jpg",
-          "../assets/images/product-images/Michael Kors çanta/product-image-1.jpg",
-          "../assets/images/product-images/Michael Kors çanta/product-image-2.jpg",
-          "../assets/images/product-images/Michael Kors çanta/product-image-3.jpg"
+          "../assets/images/product-images/michael-kors-canta/product-image-0.jpg",
+          "../assets/images/product-images/michael-kors-canta/product-image-1.jpg",
+          "../assets/images/product-images/michael-kors-canta/product-image-2.jpg",
+          "../assets/images/product-images/michael-kors-canta/product-image-3.jpg"
         ]
       },
       "category": "Çanta",
@@ -63,10 +63,10 @@
       "brand": "Valentino",
       "images": {
         "default": [
-          "../assets/images/product-images/Valentino çanta/product-image-0.jpg",
-          "../assets/images/product-images/Valentino çanta/product-image-1.jpg",
-          "../assets/images/product-images/Valentino çanta/product-image-2.jpg",
-          "../assets/images/product-images/Valentino çanta/product-image-3.jpg"
+          "../assets/images/product-images/valentino-canta/product-image-0.jpg",
+          "../assets/images/product-images/valentino-canta/product-image-1.jpg",
+          "../assets/images/product-images/valentino-canta/product-image-2.jpg",
+          "../assets/images/product-images/valentino-canta/product-image-3.jpg"
         ]
       },
       "category": "Çanta",
@@ -85,8 +85,8 @@
       "brand": "Versace",
       "images": {
         "default": [
-          "../assets/images/product-images/Versace hədiyə seti/product-image-0.webp",
-          "../assets/images/product-images/Versace hədiyə seti/product-image-1.jpg"
+          "../assets/images/product-images/versace-hediye-seti/product-image-0.webp",
+          "../assets/images/product-images/versace-hediye-seti/product-image-1.jpg"
         ]
       },
       "category": "Parfümeriya",
@@ -105,9 +105,9 @@
       "brand": "Lancome",
       "images": {
         "default": [
-          "../assets/images/product-images/Lancome Idole hədiyə seti/product-image-0.webp",
-          "../assets/images/product-images/Lancome Idole hədiyə seti/product-image-1.webp",
-          "../assets/images/product-images/Lancome Idole hədiyə seti/product-image-2.jpg"
+          "../assets/images/product-images/lancome-idole-hediye-seti/product-image-0.webp",
+          "../assets/images/product-images/lancome-idole-hediye-seti/product-image-1.webp",
+          "../assets/images/product-images/lancome-idole-hediye-seti/product-image-2.jpg"
         ]
       },
       "category": "Parfümeriya",
@@ -126,10 +126,10 @@
       "brand": "Pinko",
       "images": {
         "default": [
-          "../assets/images/product-images/Pinko çanta/product-image-0.jpg",
-          "../assets/images/product-images/Pinko çanta/product-image-1.webp",
-          "../assets/images/product-images/Pinko çanta/product-image-2.jpg",
-          "../assets/images/product-images/Pinko çanta/product-image-3.jpg"
+          "../assets/images/product-images/pinko-canta/product-image-0.jpg",
+          "../assets/images/product-images/pinko-canta/product-image-1.webp",
+          "../assets/images/product-images/pinko-canta/product-image-2.jpg",
+          "../assets/images/product-images/pinko-canta/product-image-3.jpg"
         ]
       },
       "category": "Çanta",
@@ -148,12 +148,12 @@
       "brand": "Armani Exchange",
       "images": {
         "default": [
-          "../assets/images/product-images/Armani Exchange saat/product-image-0.jpg",
-          "../assets/images/product-images/Armani Exchange saat/product-image-1.jpg",
-          "../assets/images/product-images/Armani Exchange saat/product-image-2.webp",
-          "../assets/images/product-images/Armani Exchange saat/product-image-3.jpg",
-          "../assets/images/product-images/Armani Exchange saat/product-image-4.jpg",
-          "../assets/images/product-images/Armani Exchange saat/product-image-5.webp"
+          "../assets/images/product-images/armani-exchange-saat/product-image-0.jpg",
+          "../assets/images/product-images/armani-exchange-saat/product-image-1.jpg",
+          "../assets/images/product-images/armani-exchange-saat/product-image-2.webp",
+          "../assets/images/product-images/armani-exchange-saat/product-image-3.jpg",
+          "../assets/images/product-images/armani-exchange-saat/product-image-4.jpg",
+          "../assets/images/product-images/armani-exchange-saat/product-image-5.webp"
         ]
       },
       "category": "Aksesuar",
@@ -172,10 +172,10 @@
       "brand": "Bally",
       "images": {
         "default": [
-          "../assets/images/product-images/Bally cüzdan/product-image-0.jpg",
-          "../assets/images/product-images/Bally cüzdan/product-image-1.jpg",
-          "../assets/images/product-images/Bally cüzdan/product-image-2.jpg",
-          "../assets/images/product-images/Bally cüzdan/product-image-3.jpg"
+          "../assets/images/product-images/bally-cuzdan/product-image-0.jpg",
+          "../assets/images/product-images/bally-cuzdan/product-image-1.jpg",
+          "../assets/images/product-images/bally-cuzdan/product-image-2.jpg",
+          "../assets/images/product-images/bally-cuzdan/product-image-3.jpg"
         ]
       },
       "category": "Çanta",
@@ -194,14 +194,14 @@
       "brand": "Charles&Keith",
       "images": {
         "default": [
-          "../assets/images/product-images/Charles&Keith çanta/product-image-0.jpg",
-          "../assets/images/product-images/Charles&Keith çanta/product-image-1.jpg",
-          "../assets/images/product-images/Charles&Keith çanta/product-image-2.jpg",
-          "../assets/images/product-images/Charles&Keith çanta/product-image-3.jpg",
-          "../assets/images/product-images/Charles&Keith çanta/product-image-4.jpg",
-          "../assets/images/product-images/Charles&Keith çanta/product-image-5.jpg",
-          "../assets/images/product-images/Charles&Keith çanta/product-image-6.jpg",
-          "../assets/images/product-images/Charles&Keith çanta/product-image-7.webp"
+          "../assets/images/product-images/Charles&Keith-canta/product-image-0.jpg",
+          "../assets/images/product-images/Charles&Keith-canta/product-image-1.jpg",
+          "../assets/images/product-images/Charles&Keith-canta/product-image-2.jpg",
+          "../assets/images/product-images/Charles&Keith-canta/product-image-3.jpg",
+          "../assets/images/product-images/Charles&Keith-canta/product-image-4.jpg",
+          "../assets/images/product-images/Charles&Keith-canta/product-image-5.jpg",
+          "../assets/images/product-images/Charles&Keith-canta/product-image-6.jpg",
+          "../assets/images/product-images/Charles&Keith-canta/product-image-7.webp"
         ]
       },
       "category": "Çanta",
@@ -220,12 +220,12 @@
       "brand": "Charles&Keith",
       "images": {
         "default": [
-          "../assets/images/product-images/Charles&Keith çanta-2/product-image-0.png",
-          "../assets/images/product-images/Charles&Keith çanta-2/product-image-1.png",
-          "../assets/images/product-images/Charles&Keith çanta-2/product-image-2.png",
-          "../assets/images/product-images/Charles&Keith çanta-2/product-image-3.png",
-          "../assets/images/product-images/Charles&Keith çanta-2/product-image-4.png",
-          "../assets/images/product-images/Charles&Keith çanta-2/product-image-5.png"
+          "../assets/images/product-images/Charles&Keith-canta-2/product-image-0.png",
+          "../assets/images/product-images/Charles&Keith-canta-2/product-image-1.png",
+          "../assets/images/product-images/Charles&Keith-canta-2/product-image-2.png",
+          "../assets/images/product-images/Charles&Keith-canta-2/product-image-3.png",
+          "../assets/images/product-images/Charles&Keith-canta-2/product-image-4.png",
+          "../assets/images/product-images/Charles&Keith-canta-2/product-image-5.png"
         ]
       },
       "category": "Çanta",
@@ -244,11 +244,11 @@
       "brand": "Charles&Keith",
       "images": {
         "default": [
-          "../assets/images/product-images/Charles&Keith çanta-3/product-image-0.webp",
-          "../assets/images/product-images/Charles&Keith çanta-3/product-image-1.jpg",
-          "../assets/images/product-images/Charles&Keith çanta-3/product-image-2.jpg",
-          "../assets/images/product-images/Charles&Keith çanta-3/product-image-3.jpg",
-          "../assets/images/product-images/Charles&Keith çanta-3/product-image-4.jpg"
+          "../assets/images/product-images/Charles&Keith-canta-3/product-image-0.webp",
+          "../assets/images/product-images/Charles&Keith-canta-3/product-image-1.jpg",
+          "../assets/images/product-images/Charles&Keith-canta-3/product-image-2.jpg",
+          "../assets/images/product-images/Charles&Keith-canta-3/product-image-3.jpg",
+          "../assets/images/product-images/Charles&Keith-canta-3/product-image-4.jpg"
         ]
       },
       "category": "Çanta",
@@ -267,10 +267,10 @@
       "brand": "Charles&Keith",
       "images": {
         "default": [
-          "../assets/images/product-images/Charles&Keith çanta-4/product-image-0.jpg",
-          "../assets/images/product-images/Charles&Keith çanta-4/product-image-1.jpg",
-          "../assets/images/product-images/Charles&Keith çanta-4/product-image-2.webp",
-          "../assets/images/product-images/Charles&Keith çanta-4/product-image-3.jpg"
+          "../assets/images/product-images/Charles&Keith-canta-4/product-image-0.jpg",
+          "../assets/images/product-images/Charles&Keith-canta-4/product-image-1.jpg",
+          "../assets/images/product-images/Charles&Keith-canta-4/product-image-2.webp",
+          "../assets/images/product-images/Charles&Keith-canta-4/product-image-3.jpg"
         ]
       },
       "category": "Çanta",
@@ -285,12 +285,12 @@
     },
     {
       "id": 13,
-      "name": "Canta",
+      "name": "Çanta",
       "brand": "U.S POLO ASSN.",
       "images": {
         "default": [
-          "../assets/images/product-images/Çanta/product-image-0.webp",
-          "../assets/images/product-images/Çanta/product-image-1.webp"
+          "../assets/images/product-images/canta/product-image-0.webp",
+          "../assets/images/product-images/canta/product-image-1.webp"
         ]
       },
       "category": "Çanta",
@@ -309,10 +309,10 @@
       "brand": "U.S POLO ASSN.",
       "images": {
         "default": [
-          "../assets/images/product-images/Gödəkcə/product-image-0.webp",
-          "../assets/images/product-images/Gödəkcə/product-image-1.webp",
-          "../assets/images/product-images/Gödəkcə/product-image-2.webp",
-          "../assets/images/product-images/Gödəkcə/product-image-3.webp"
+          "../assets/images/product-images/godekce/product-image-0.webp",
+          "../assets/images/product-images/godekce/product-image-1.webp",
+          "../assets/images/product-images/godekce/product-image-2.webp",
+          "../assets/images/product-images/godekce/product-image-3.webp"
         ]
       },
       "category": "Geyim",
