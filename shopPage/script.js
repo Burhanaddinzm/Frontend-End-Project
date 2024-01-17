@@ -97,7 +97,7 @@ const handlePage = (pages) => {
   const disableButton = (pageIndex) => {
     if (pageIndex === 0) {
       previousBtn.classList.add("disabled");
-      previousBtn.setAttribute("disabled", true);
+      previousBtn.setAttribute("disabled", "");
       nextBtn.classList.remove("disabled");
       nextBtn.removeAttribute("disabled");
     }
@@ -105,23 +105,9 @@ const handlePage = (pages) => {
       previousBtn.classList.remove("disabled");
       previousBtn.removeAttribute("disabled");
       nextBtn.classList.add("disabled");
-      nextBtn.setAttribute("disabled", true);
+      nextBtn.setAttribute("disabled", "");
     }
   };
-
-  previousBtn.addEventListener("click", () => {
-    pageIndex--;
-    activatePageButton(pageIndex);
-    displayProducts(pages[pageIndex]);
-    disableButton(pageIndex);
-  });
-
-  nextBtn.addEventListener("click", () => {
-    pageIndex++;
-    activatePageButton(pageIndex);
-    displayProducts(pages[pageIndex]);
-    disableButton(pageIndex);
-  });
 
   const activatePageButton = (pageIndex) => {
     pageButtons.forEach((button) => {
@@ -133,6 +119,19 @@ const handlePage = (pages) => {
       buttonToActivate.classList.add("active-page");
     }
   };
+
+  previousBtn.addEventListener("click", () => {
+    pageIndex--;
+    activatePageButton(pageIndex);
+    displayProducts(pages[pageIndex]);
+    disableButton(pageIndex);
+  });
+  nextBtn.addEventListener("click", () => {
+    pageIndex++;
+    activatePageButton(pageIndex);
+    displayProducts(pages[pageIndex]);
+    disableButton(pageIndex);
+  });
   pageButtons.forEach((button) => {
     button.addEventListener("click", () => {
       pageIndex = parseInt(button.dataset.page);
