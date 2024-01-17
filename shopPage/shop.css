@@ -560,6 +560,7 @@ button {
 
 .active-page {
   background: var(--bg-color-3) !important;
+  font-weight: 700 !important;
 }
 
 main .container {

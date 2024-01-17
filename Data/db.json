@@ -324,6 +324,49 @@
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 15,
+      "name": "Əl çantası",
+      "brand": "U.S POLO ASSN.",
+      "images": {
+        "default": [
+          "../assets/images/product-images/el-cantasi/product-image-0.webp",
+          "../assets/images/product-images/el-cantasi/product-image-1.jpg",
+          "../assets/images/product-images/el-cantasi/product-image-2.webp",
+          "../assets/images/product-images/el-cantasi/product-image-3.webp"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Əl çantası",
+      "colors": [],
+      "sizes": [],
+      "price": 110.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 16,
+      "name": "Versace Jeans Couture çanta",
+      "brand": "Versace Jeans Couture",
+      "images": {
+        "default": [
+          "../assets/images/product-images/versace-jeans-couture-canta/product-image-0.png",
+          "../assets/images/product-images/versace-jeans-couture-canta/product-image-1.png",
+          "../assets/images/product-images/versace-jeans-couture-canta/product-image-2.png"
+        ]
+      },
+      "category": "Çanta",
+      "subcategory": "Crossbody çanta",
+      "colors": [],
+      "sizes": [],
+      "price": 355.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     }
   ],
   "cart": []

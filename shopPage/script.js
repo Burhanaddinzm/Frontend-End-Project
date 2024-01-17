@@ -49,7 +49,7 @@ const fetchProducts = async () => {
     const data = await response.json();
     console.log(data);
 
-    const itemsPerPage = 12;
+    const itemsPerPage = 4;
     const pages = paginate(data, itemsPerPage);
     console.log(pages);
 
@@ -72,8 +72,6 @@ const paginate = (data, itemsPerPage) => {
 // Page Handler
 const handlePage = (pages) => {
   let pageIndex = 0;
-
-  displayProducts(pages[pageIndex]);
 
   pageNavigation.innerHTML = "";
 
@@ -106,6 +104,12 @@ const handlePage = (pages) => {
       previousBtn.removeAttribute("disabled");
       nextBtn.classList.add("disabled");
       nextBtn.setAttribute("disabled", "");
+    }
+    if (pageIndex > 0 && pageIndex < pages.length - 1) {
+      previousBtn.classList.remove("disabled");
+      previousBtn.removeAttribute("disabled");
+      nextBtn.classList.remove("disabled");
+      nextBtn.removeAttribute("disabled");
     }
   };
 
@@ -143,6 +147,7 @@ const handlePage = (pages) => {
     });
   });
 
+  displayProducts(pages[pageIndex]);
   activatePageButton(pageIndex);
   disableButton(pageIndex);
 };
