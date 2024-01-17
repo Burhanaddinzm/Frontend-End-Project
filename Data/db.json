@@ -55,6 +55,14 @@
       "id": 3,
       "name": "Valentino çanta",
       "brand": "Valentino",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Valentino çanta/product-image-0.jpg",
+          "../assets/images/product-images/Valentino çanta/product-image-1.jpg",
+          "../assets/images/product-images/Valentino çanta/product-image-2.jpg",
+          "../assets/images/product-images/Valentino çanta/product-image-3.jpg"
+        ]
+      },
       "category": "Çanta",
       "subcategory": "Crossbody çanta",
       "colors": [],
@@ -66,6 +74,12 @@
       "id": 4,
       "name": "Versace hədiyə seti",
       "brand": "Versace",
+      "images": {
+        "default": [
+          "../assets/images/product-images/Versace hədiyə seti/product-image-0.webp",
+          "../assets/images/product-images/Versace hədiyə seti/product-image-1.jpg"
+        ]
+      },
       "category": "Parfümeriya",
       "subcategory": "Ətir seti",
       "colors": [],
