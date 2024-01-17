@@ -19,18 +19,9 @@ const pageNavigation = document.querySelector(".page-navigation");
 // filtersPlusMinus.textContent = "-";
 // categoriesFilterUl.classList.remove("display-none");
 
-const filterCategoriesChevron = document.querySelectorAll(
-  "#categories-filter-ul img"
-);
-
-const subcategoriesFilterUl = document.getElementById(
-  "subcategories-filter-ul"
-);
-
 let isSortingOpen = false;
 
 // Sorting
-
 sortingContainer.addEventListener("click", () => {
   if (!isSortingOpen) {
     sortingContainer.style.borderRadius = "12px 12px 0 0";
@@ -41,19 +32,6 @@ sortingContainer.addEventListener("click", () => {
     sortingCategories.classList.remove("display-none");
     isSortingOpen = true;
   } else {
-    sortingContainer.style.borderRadius = "";
-    sortingContainer.style.borderBottom = "";
-
-    sortingBtn.style.borderBottom = "";
-
-    sortingCategories.classList.add("display-none");
-    isSortingOpen = false;
-  }
-});
-
-window.addEventListener("click", (e) => {
-  // Sorting
-  if (!e.target.closest(".sorting-container")) {
     sortingContainer.style.borderRadius = "";
     sortingContainer.style.borderBottom = "";
 
@@ -105,7 +83,18 @@ const displayProducts = (products) => {
 const handlePages = () => {};
 
 window.addEventListener("click", (e) => {
+  // Sorting
   const clicked = e.target;
+
+  if (!clicked.closest(".sorting-container")) {
+    sortingContainer.style.borderRadius = "";
+    sortingContainer.style.borderBottom = "";
+
+    sortingBtn.style.borderBottom = "";
+
+    sortingCategories.classList.add("display-none");
+    isSortingOpen = false;
+  }
 
   // productID
   if (clicked.closest(".product")) {
