@@ -72,6 +72,8 @@ const paginate = (data, itemsPerPage) => {
 // Page Handler
 const handlePage = (pages) => {
   let pageIndex = 0;
+  displayProducts(pages[pageIndex]);
+  
   pageNavigation.innerHTML = "";
 
   for (let i = 0; i < pages.length; i++) {
