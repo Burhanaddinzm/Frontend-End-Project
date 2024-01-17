@@ -9,11 +9,22 @@ const categories = document.querySelectorAll(".category");
 const presentationWrapper = document.querySelectorAll(".presentation-wrapper");
 const chevron = document.querySelectorAll(".chevron");
 
+const cartItemCount = document.getElementById("item-count");
+
 let windowWidth = window.innerWidth;
 
 let isMenuOpen = false;
 let isCatalogOpen = false;
 
+//Fetch Cart
+const fetchCart = async () => {
+  const response = await fetch("http://localhost:3000/cart");
+  const data = await response.json();
+
+  cartItemCount.textContent = data.length;
+};
+
+// Responsive Resize
 window.addEventListener("resize", () => {
   windowWidth = window.innerWidth;
   if (windowWidth >= 768) {
@@ -84,6 +95,8 @@ presentationWrapper.forEach((wrapper, index) => {
 
 window.addEventListener("click", (e) => {
   const clicked = e.target;
+
+  // Catalog
   if (
     !clicked.closest(".catalog-btn") &&
     !catalogContainer.contains(clicked) &&
@@ -104,3 +117,4 @@ window.addEventListener("click", (e) => {
   }
 });
 
+fetchCart();

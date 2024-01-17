@@ -7,7 +7,8 @@ const fetchProduct = async () => {
     `http://localhost:3000/products?id=${fetchedProductId}`
   );
   const data = await response.json();
-  console.log(data);
+  console.log(...data);
 };
 
 fetchProduct();
+

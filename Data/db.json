@@ -325,5 +325,6 @@
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     }
-  ]
+  ],
+  "cart": []
 }

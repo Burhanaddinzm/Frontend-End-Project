@@ -42,12 +42,91 @@ sortingContainer.addEventListener("click", () => {
   }
 });
 
-// Datafetch
-const fetchData = async () => {
-  const response = await fetch("http://localhost:3000/products");
-  const data = await response.json();
-  console.log(data);
-  displayProducts(data);
+// Fetch Products
+const fetchProducts = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/products");
+    const data = await response.json();
+    console.log(data);
+
+    const itemsPerPage = 12;
+    const pages = paginate(data, itemsPerPage);
+    console.log(pages);
+
+    handlePage(pages);
+  } catch (error) {
+    console.error("Error fetching products:", error);
+  }
+};
+
+// Pagination
+const paginate = (data, itemsPerPage) => {
+  const pages = [];
+  for (let i = 0; i < data.length; i += itemsPerPage) {
+    const pageArray = data.slice(i, i + itemsPerPage);
+    pages.push(pageArray);
+  }
+  return pages;
+};
+
+// Page Handler
+const handlePage = (pages) => {
+  let pageIndex = 0;
+  pageNavigation.innerHTML = "";
+
+  for (let i = 0; i < pages.length; i++) {
+    pageNavigation.innerHTML += `
+    <button data-page="${i}" id="page-btn">${i + 1}</button>`;
+  }
+
+  const previousBtn = document.createElement("button");
+  previousBtn.id = "prev-page";
+  previousBtn.textContent = "Əvvəlki";
+  pageNavigation.insertAdjacentElement("afterbegin", previousBtn);
+
+  const nextBtn = document.createElement("button");
+  nextBtn.id = "next-page";
+  nextBtn.textContent = "Növbəti";
+  pageNavigation.insertAdjacentElement("beforeend", nextBtn);
+
+  const disableButton = (pageIndex) => {
+    if (pageIndex === 0) {
+      previousBtn.classList.add("disabled");
+      previousBtn.setAttribute("disabled", true);
+      nextBtn.classList.remove("disabled");
+      nextBtn.removeAttribute("disabled");
+    }
+    if (pageIndex === pages.length - 1) {
+      previousBtn.classList.remove("disabled");
+      previousBtn.removeAttribute("disabled");
+      nextBtn.classList.add("disabled");
+      nextBtn.setAttribute("disabled", true);
+    }
+  };
+
+  previousBtn.addEventListener("click", () => {
+    pageIndex--;
+    displayProducts(pages[pageIndex]);
+    disableButton(pageIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    pageIndex++;
+    displayProducts(pages[pageIndex]);
+    disableButton(pageIndex);
+  });
+
+  const pageButtons = document.querySelectorAll("#page-btn");
+
+  pageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      pageIndex = parseInt(button.dataset.page);
+      displayProducts(pages[pageIndex]);
+      disableButton(pageIndex);
+    });
+  });
+
+  disableButton(pageIndex);
 };
 
 // Display Products
@@ -79,13 +158,10 @@ const displayProducts = (products) => {
   });
 };
 
-// Handle Pages
-const handlePages = () => {};
-
 window.addEventListener("click", (e) => {
-  // Sorting
   const clicked = e.target;
 
+  // Sorting
   if (!clicked.closest(".sorting-container")) {
     sortingContainer.style.borderRadius = "";
     sortingContainer.style.borderBottom = "";
@@ -106,4 +182,4 @@ window.addEventListener("click", (e) => {
   }
 });
 
-fetchData();
+fetchProducts();
