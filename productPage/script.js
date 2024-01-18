@@ -23,9 +23,12 @@ const displayProduct = (product) => {
     product.price -
     product.price * (product.discount / 100)
   ).toFixed(2);
+
   subcategory.textContent = product.subcategory;
   name.textContent = product.name;
   brand.textContent = product.brand;
+  description.textContent = product.description;
+
   if (!product.onsale) {
     price.innerHTML = `AZN ${product.price.toFixed(2)}`;
   } else {
@@ -33,7 +36,18 @@ const displayProduct = (product) => {
     price.innerHTML = `<p>AZN ${product.price.toFixed(2)}</p>
     <span>AZN ${discountedPrice}</span>`;
   }
-  description.textContent = product.description;
 };
+
+window.addEventListener("click", (e) => {
+  const clicked = e.target;
+
+  // Subcategory
+  if (clicked.id === "subcategory") {
+    localStorage.setItem(
+      "productPageSubcategory",
+      JSON.stringify(clicked.textContent)
+    );
+  }
+});
 
 fetchProduct();

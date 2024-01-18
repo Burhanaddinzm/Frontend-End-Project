@@ -419,5 +419,29 @@
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     }
   ],
+  "brands": [
+    { "Emporio Armani": "../assets/images/emporio-armani.png" },
+    { "Michael Kors": "../assets/images/michael-kors.jpg" },
+    { "Valentino": "../assets/images/valentino.jpg" },
+    { "Tory Burch": "../assets/images/tory-burch.png" },
+    { "Coach": "../assets/images/coach.png" },
+    { "Charles&Keith": "../assets/images/charleskeith.png" },
+    { "New Balance": "../assets/images/new-balance.svg" },
+    { "Adidas": "../assets/images/adidas.png" },
+    { "Nike": "../assets/images/nike.png" },
+    { "Ralph Lauren": "../assets/images/ralph-lauren.jpg" },
+    { "Liu Jo": "../assets/images/liu-jo.jpg" },
+    { "Tommy Hilfiger": "../assets/images/tommy-hilfiger.png" },
+    { "Armani Exchange": "../assets/images/armani-exchange.png" },
+    { "Versace Jeans Couture": "../assets/images/versace-jeans-couture.png" },
+    { "Pinko": "../assets/images/pinko.png" },
+    { "Love Moschino": "../assets/images/love-moschino.png" },
+    { "Lacoste": "../assets/images/lacoste.png" },
+    { "Marc Jacobs": "../assets/images/marc-jacobs.png" },
+    { "U.S POLO ASSN.": "../assets/images/us-polo-assn-Rkz56usX96bpwtJg.png" },
+    { "Bally": "../assets/images/bally-1hiKumYYehrIzAPv.svg" },
+    { "Lancome": "../assets/images/lancome-ncPitCOJvcI2gLDq.svg" },
+    { "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png" }
+  ],
   "cart": []
 }
