@@ -3,11 +3,15 @@
 const cardContainer = document.querySelector(".card-container");
 
 const fetchBrands = async () => {
-  const response = await fetch("http://localhost:3000/brands");
-  const data = await response.json();
-  console.log(data);
+  try {
+    const response = await fetch("http://localhost:3000/brands");
+    const data = await response.json();
+    console.log(data);
 
-  displayBrands(data);
+    displayBrands(data);
+  } catch (error) {
+    console.error("Failed to fetch data" + error);
+  }
 };
 
 const displayBrands = (brands) => {

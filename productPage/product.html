@@ -210,7 +210,11 @@
           </div>
           <!-- Catalog End -->
           <!-- Search -->
-          <form id="searchform" class="serach-bar" action="../index.html">
+          <form
+            id="searchform"
+            class="serach-bar"
+            action="../shopPage/shop.html"
+          >
             <input placeholder="Axtarış" type="text" />
             <button form="searchform" class="search">
               <img src="../assets/icons/glass.svg" alt="Glass" />
@@ -311,18 +315,18 @@
           <div class="addtocart-container">
             <div class="size-container">
               <span>Ölçü seç:</span>
-              <button id="size-btn">S</button>
+              <button class="active" id="size-btn">S</button>
               <button id="size-btn">M</button>
               <button id="size-btn">L</button>
             </div>
             <div class="color-container">
-              <button title="Ağ" id="color">
+              <button data-color="white" id="color">
                 <img
                   src="../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-0.jpg"
                   alt="Color"
                 />
               </button>
-              <button title="Qırmızı" id="color">
+              <button data-color="red" id="color">
                 <img
                   src="../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-0.webp"
                   alt="Color"
@@ -331,10 +335,17 @@
             </div>
             <div class="cart-container">
               <button id="add-btn">Səbətə əlavə et</button>
-              <p id="stock-count">
-                Yalnız bir ədəd qalıb;Stokda yoxdur. Sifariş etmək üçün Whatsapp
-                və ya Instagram adresimizlə əlaqə saxlayın.
-              </p>
+              <div class="stock-count-container">
+                <p id="stock">
+                  Yalnız bir ədəd qalıb;Stokda yoxdur. Sifariş etmək üçün
+                  Whatsapp və ya Instagram adresimizlə əlaqə saxlayın.
+                </p>
+                <div class="input-container">
+                  <button id="decrement-btn">-</button>
+                  <input id="count" value="1" min="1" max="10" type="number" />
+                  <button id="increment-btn">+</button>
+                </div>
+              </div>
             </div>
           </div>
           <!-- Addtocart Container End -->
