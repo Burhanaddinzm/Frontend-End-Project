@@ -41,7 +41,7 @@
       "brand": "Michael Kors",
       "images": {
         "default": [
-          "../assets/images/product-images/michael-kors-canta/product-image-0.jpg",
+          "../assets/images/product-images/michael-kors-canta/product-image-0.png",
           "../assets/images/product-images/michael-kors-canta/product-image-1.jpg",
           "../assets/images/product-images/michael-kors-canta/product-image-2.jpg",
           "../assets/images/product-images/michael-kors-canta/product-image-3.jpg"
@@ -366,6 +366,56 @@
       "stock": 10,
       "onsale": false,
       "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 17,
+      "name": "ADIDAS ADIZERO TAKUMI SEN 10",
+      "brand": "Adidas",
+      "images": {
+        "default": [
+          "../assets/images/product-images/adidas-adizero-takumi-sen-10/product-image-0.jpg",
+          "../assets/images/product-images/adidas-adizero-takumi-sen-10/product-image-1.jpg",
+          "../assets/images/product-images/adidas-adizero-takumi-sen-10/product-image-2.jpg",
+          "../assets/images/product-images/adidas-adizero-takumi-sen-10/product-image-3.jpg"
+        ]
+      },
+      "category": "Ayaqqabı",
+      "subcategory": "İdman ayaqqabısı",
+      "colors": [],
+      "sizes": ["34", "36", "38"],
+      "price": 300.0,
+      "stock": 10,
+      "onsale": false,
+      "discount": 0,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
+    },
+    {
+      "id": 18,
+      "name": "Lacoste Tennis T-shirt",
+      "brand": "Lacoste",
+      "images": {
+        "blue": [
+          "../assets/images/product-images/lacoste-tennis-t-shirt-blue/product-image-0.jpg",
+          "../assets/images/product-images/lacoste-tennis-t-shirt-blue/product-image-1.jpg",
+          "../assets/images/product-images/lacoste-tennis-t-shirt-blue/product-image-2.jpg",
+          "../assets/images/product-images/lacoste-tennis-t-shirt-blue/product-image-3.jpg"
+        ],
+        "white": [
+          "../assets/images/product-images/lacoste-tennis-t-shirt-white/product-image-0.jpg",
+          "../assets/images/product-images/lacoste-tennis-t-shirt-white/product-image-1.jpg",
+          "../assets/images/product-images/lacoste-tennis-t-shirt-white/product-image-2.jpg",
+          "../assets/images/product-images/lacoste-tennis-t-shirt-white/product-image-3.jpg"
+        ]
+      },
+      "category": "Geyim",
+      "subcategory": "T-shirt",
+      "colors": ["blue", "white"],
+      "sizes": ["S", "M", "L"],
+      "price": 120.0,
+      "stock": 20,
+      "onsale": true,
+      "discount": 30,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     }
   ],

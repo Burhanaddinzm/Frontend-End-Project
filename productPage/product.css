@@ -597,6 +597,20 @@ main .container .product-container .name-desc-container #price {
   font-weight: 700;
   margin-top: 8px;
 }
+main .container .product-container .name-desc-container #price.discount {
+  margin-top: 8px;
+}
+main .container .product-container .name-desc-container #price.discount p {
+  color: red;
+  text-decoration: line-through;
+  font-size: 20px;
+  font-weight: 700;
+}
+main .container .product-container .name-desc-container #price.discount span {
+  color: var(--color-1);
+  font-size: 20px;
+  font-weight: 700;
+}
 main .container .product-container .name-desc-container .line {
   width: 100%;
   height: 1px;

@@ -49,7 +49,7 @@ const fetchProducts = async () => {
     const data = await response.json();
     console.log(data);
 
-    const itemsPerPage = 4;
+    const itemsPerPage = 8;
     const pages = paginate(data, itemsPerPage);
     console.log(pages);
 
