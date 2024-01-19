@@ -41,7 +41,7 @@ const fetchProduct = async () => {
 
     displayProduct(...data);
   } catch (error) {
-    console.error("Failed to fetch data:" + error);
+    console.log("Failed to fetch data:" + error);
   }
 };
 
@@ -379,13 +379,32 @@ const displayProduct = (product) => {
         return;
       }
 
-      postToCart(selectedProduct);
+      checkCart(selectedProduct, product);
     });
   };
 
   handleAddToCart(product);
   handleSliderBtns();
   handleImage();
+};
+
+const checkCart = async (selectedProduct, product) => {
+  const response = await fetch("http://localhost:3000/cart");
+  const data = await response.json();
+
+  if (data.length > 0) {
+    data.forEach((item) => {
+      if (item.name === selectedProduct.name) {
+        const countToCheck = selectedProduct.count + item.count;
+
+        if (countToCheck > product.stock) {
+          alert("This count exceeds stock!");
+        } else {
+          putToCart(selectedProduct, item);
+        }
+      } else postToCart(selectedProduct);
+    });
+  } else postToCart(selectedProduct);
 };
 
 const postToCart = async (product) => {
@@ -396,6 +415,18 @@ const postToCart = async (product) => {
       "Content-type": "application/json; charset=UTF-8",
     },
   });
+  const data = await response.json();
+};
+
+const putToCart = async (product, cartData) => {
+  product.count += cartData.count;
+
+  const response = await fetch(`http://localhost:3000/cart/${cartData.id}`, {
+    method: "PUT",
+    body: JSON.stringify(product),
+    headers: { "Content-type": "application/json; charset=UTF-8" },
+  });
+
   const data = await response.json();
 };
 

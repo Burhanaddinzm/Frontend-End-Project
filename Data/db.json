@@ -27,13 +27,8 @@
       },
       "category": "Çanta",
       "subcategory": "Əl çantası",
-      "colors": [
-        "red",
-        "white"
-      ],
-      "sizes": [
-        "Medium"
-      ],
+      "colors": ["red", "white"],
+      "sizes": ["Medium"],
       "price": 300,
       "stock": 20,
       "onsale": false,
@@ -323,9 +318,7 @@
       "category": "Geyim",
       "subcategory": "Gödəkcə",
       "colors": [],
-      "sizes": [
-        "M"
-      ],
+      "sizes": ["M"],
       "price": 100,
       "stock": 10,
       "onsale": false,
@@ -390,11 +383,7 @@
       "category": "Ayaqqabı",
       "subcategory": "İdman ayaqqabısı",
       "colors": [],
-      "sizes": [
-        "34",
-        "36",
-        "38"
-      ],
+      "sizes": ["34", "36", "38"],
       "price": 300,
       "stock": 10,
       "onsale": false,
@@ -421,15 +410,8 @@
       },
       "category": "Geyim",
       "subcategory": "T-shirt",
-      "colors": [
-        "blue",
-        "white"
-      ],
-      "sizes": [
-        "S",
-        "M",
-        "L"
-      ],
+      "colors": ["blue", "white"],
+      "sizes": ["S", "M", "L"],
       "price": 120,
       "stock": 20,
       "onsale": true,
@@ -439,139 +421,71 @@
   ],
   "brands": [
     {
-      "Emporio Armani": "../assets/images/emporio-armani.png",
-      "id": "9bc9"
+      "Emporio Armani": "../assets/images/emporio-armani.png"
     },
     {
-      "Michael Kors": "../assets/images/michael-kors.jpg",
-      "id": "db47"
+      "Michael Kors": "../assets/images/michael-kors.jpg"
     },
     {
-      "Valentino": "../assets/images/valentino.jpg",
-      "id": "5a45"
+      "Valentino": "../assets/images/valentino.jpg"
     },
     {
-      "Tory Burch": "../assets/images/tory-burch.png",
-      "id": "6668"
+      "Tory Burch": "../assets/images/tory-burch.png"
     },
     {
-      "Coach": "../assets/images/coach.png",
-      "id": "136b"
+      "Coach": "../assets/images/coach.png"
     },
     {
-      "Charles&Keith": "../assets/images/charleskeith.png",
-      "id": "65c4"
+      "Charles&Keith": "../assets/images/charleskeith.png"
     },
     {
-      "New Balance": "../assets/images/new-balance.svg",
-      "id": "ab45"
+      "New Balance": "../assets/images/new-balance.svg"
     },
     {
-      "Adidas": "../assets/images/adidas.png",
-      "id": "66e6"
+      "Adidas": "../assets/images/adidas.png"
     },
     {
-      "Nike": "../assets/images/nike.png",
-      "id": "1c8e"
+      "Nike": "../assets/images/nike.png"
     },
     {
-      "Ralph Lauren": "../assets/images/ralph-lauren.jpg",
-      "id": "7419"
+      "Ralph Lauren": "../assets/images/ralph-lauren.jpg"
     },
     {
-      "Liu Jo": "../assets/images/liu-jo.jpg",
-      "id": "352b"
+      "Liu Jo": "../assets/images/liu-jo.jpg"
     },
     {
-      "Tommy Hilfiger": "../assets/images/tommy-hilfiger.png",
-      "id": "3995"
+      "Tommy Hilfiger": "../assets/images/tommy-hilfiger.png"
     },
     {
-      "Armani Exchange": "../assets/images/armani-exchange.png",
-      "id": "8ea4"
+      "Armani Exchange": "../assets/images/armani-exchange.png"
     },
     {
-      "Versace Jeans Couture": "../assets/images/versace-jeans-couture.png",
-      "id": "1f13"
+      "Versace Jeans Couture": "../assets/images/versace-jeans-couture.png"
     },
     {
-      "Pinko": "../assets/images/pinko.png",
-      "id": "2b48"
+      "Pinko": "../assets/images/pinko.png"
     },
     {
-      "Love Moschino": "../assets/images/love-moschino.png",
-      "id": "e285"
+      "Love Moschino": "../assets/images/love-moschino.png"
     },
     {
-      "Lacoste": "../assets/images/lacoste.png",
-      "id": "4e25"
+      "Lacoste": "../assets/images/lacoste.png"
     },
     {
-      "Marc Jacobs": "../assets/images/marc-jacobs.png",
-      "id": "de32"
+      "Marc Jacobs": "../assets/images/marc-jacobs.png"
     },
     {
-      "U.S POLO ASSN.": "../assets/images/us-polo-assn-Rkz56usX96bpwtJg.png",
-      "id": "6921"
+      "U.S POLO ASSN.": "../assets/images/us-polo-assn-Rkz56usX96bpwtJg.png"
     },
     {
-      "Bally": "../assets/images/bally-1hiKumYYehrIzAPv.svg",
-      "id": "d797"
+      "Bally": "../assets/images/bally-1hiKumYYehrIzAPv.svg"
     },
     {
-      "Lancome": "../assets/images/lancome-ncPitCOJvcI2gLDq.svg",
-      "id": "13e1"
+      "Lancome": "../assets/images/lancome-ncPitCOJvcI2gLDq.svg"
     },
     {
-      "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png",
-      "id": "27f3"
+      "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png"
     }
   ],
-  "cart": [
-    {
-      "id": "6bc1",
-      "size": "Medium",
-      "color": "red",
-      "count": 1,
-      "name": "Emporio Armani shopper bag",
-      "price": 300,
-      "image": "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-0.webp"
-    },
-    {
-      "id": "6c61",
-      "size": "Medium",
-      "color": "red",
-      "count": 10,
-      "name": "Emporio Armani shopper bag",
-      "price": 300,
-      "image": "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-0.webp"
-    },
-    {
-      "id": "4f32",
-      "size": "Medium",
-      "color": "white",
-      "count": 1,
-      "name": "Emporio Armani shopper bag",
-      "price": 300,
-      "image": "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-0.jpg"
-    },
-    {
-      "id": "865b",
-      "size": "",
-      "color": "",
-      "count": 1,
-      "name": "Michael Kors çanta",
-      "price": 190,
-      "image": "../assets/images/product-images/michael-kors-canta/product-image-0.png"
-    },
-    {
-      "id": "7812",
-      "size": "",
-      "color": "",
-      "count": 7,
-      "name": "Michael Kors çanta",
-      "price": 190,
-      "image": "../assets/images/product-images/michael-kors-canta/product-image-0.png"
-    }
-  ]
+  "cart": []
 }
