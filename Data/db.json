@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Emporio Armani shopper bag",
       "brand": "Emporio Armani",
       "images": {
@@ -27,16 +27,21 @@
       },
       "category": "Çanta",
       "subcategory": "Əl çantası",
-      "colors": ["red", "white"],
-      "sizes": ["Medium"],
-      "price": 300.0,
+      "colors": [
+        "red",
+        "white"
+      ],
+      "sizes": [
+        "Medium"
+      ],
+      "price": 300,
       "stock": 20,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Michael Kors çanta",
       "brand": "Michael Kors",
       "images": {
@@ -51,14 +56,14 @@
       "subcategory": "Crossbody çanta",
       "colors": [],
       "sizes": [],
-      "price": 190.0,
+      "price": 190,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Valentino çanta",
       "brand": "Valentino",
       "images": {
@@ -73,14 +78,14 @@
       "subcategory": "Crossbody çanta",
       "colors": [],
       "sizes": [],
-      "price": 200.0,
+      "price": 200,
       "stock": 1,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Versace hədiyə seti",
       "brand": "Versace",
       "images": {
@@ -93,14 +98,14 @@
       "subcategory": "Ətir seti",
       "colors": [],
       "sizes": [],
-      "price": 270.0,
+      "price": 270,
       "stock": 5,
       "onsale": true,
       "discount": 20,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Lancome Idole hədiyə seti",
       "brand": "Lancome",
       "images": {
@@ -114,14 +119,14 @@
       "subcategory": "Ətir seti",
       "colors": [],
       "sizes": [],
-      "price": 250.0,
+      "price": 250,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Pinko çanta",
       "brand": "Pinko",
       "images": {
@@ -136,14 +141,14 @@
       "subcategory": "Crossbody çanta",
       "colors": [],
       "sizes": [],
-      "price": 350.0,
+      "price": 350,
       "stock": 100,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Armani Exchange saat",
       "brand": "Armani Exchange",
       "images": {
@@ -160,14 +165,14 @@
       "subcategory": "Saat",
       "colors": [],
       "sizes": [],
-      "price": 300.0,
+      "price": 300,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Bally cüzdan",
       "brand": "Bally",
       "images": {
@@ -182,14 +187,14 @@
       "subcategory": "Cüzdan",
       "colors": [],
       "sizes": [],
-      "price": 300.0,
+      "price": 300,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Charles&Keith çanta",
       "brand": "Charles&Keith",
       "images": {
@@ -208,14 +213,14 @@
       "subcategory": "Crossbody çanta",
       "colors": [],
       "sizes": [],
-      "price": 125.0,
+      "price": 125,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Charles&Keith çanta",
       "brand": "Charles&Keith",
       "images": {
@@ -232,14 +237,14 @@
       "subcategory": "Əl çantası",
       "colors": [],
       "sizes": [],
-      "price": 175.0,
+      "price": 175,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Charles&Keith çanta",
       "brand": "Charles&Keith",
       "images": {
@@ -255,14 +260,14 @@
       "subcategory": "Crossbody çanta",
       "colors": [],
       "sizes": [],
-      "price": 165.0,
+      "price": 165,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Charles&Keith çanta",
       "brand": "Charles&Keith",
       "images": {
@@ -277,14 +282,14 @@
       "subcategory": "Crossbody çanta",
       "colors": [],
       "sizes": [],
-      "price": 165.0,
+      "price": 165,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Çanta",
       "brand": "U.S POLO ASSN.",
       "images": {
@@ -297,14 +302,14 @@
       "subcategory": "Crossbody çanta",
       "colors": [],
       "sizes": [],
-      "price": 85.0,
+      "price": 85,
       "stock": 0,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Gödəkcə",
       "brand": "U.S POLO ASSN.",
       "images": {
@@ -318,15 +323,17 @@
       "category": "Geyim",
       "subcategory": "Gödəkcə",
       "colors": [],
-      "sizes": ["M"],
-      "price": 100.0,
+      "sizes": [
+        "M"
+      ],
+      "price": 100,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Əl çantası",
       "brand": "U.S POLO ASSN.",
       "images": {
@@ -341,14 +348,14 @@
       "subcategory": "Əl çantası",
       "colors": [],
       "sizes": [],
-      "price": 110.0,
+      "price": 110,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Versace Jeans Couture çanta",
       "brand": "Versace Jeans Couture",
       "images": {
@@ -362,14 +369,14 @@
       "subcategory": "Crossbody çanta",
       "colors": [],
       "sizes": [],
-      "price": 355.0,
+      "price": 355,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "ADIDAS ADIZERO TAKUMI SEN 10",
       "brand": "Adidas",
       "images": {
@@ -383,15 +390,19 @@
       "category": "Ayaqqabı",
       "subcategory": "İdman ayaqqabısı",
       "colors": [],
-      "sizes": ["34", "36", "38"],
-      "price": 300.0,
+      "sizes": [
+        "34",
+        "36",
+        "38"
+      ],
+      "price": 300,
       "stock": 10,
       "onsale": false,
       "discount": 0,
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet eos repudiandae nihil cum nostrum reprehenderit voluptate autem voluptatem officia pariatur."
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Lacoste Tennis T-shirt",
       "brand": "Lacoste",
       "images": {
@@ -410,9 +421,16 @@
       },
       "category": "Geyim",
       "subcategory": "T-shirt",
-      "colors": ["blue", "white"],
-      "sizes": ["S", "M", "L"],
-      "price": 120.0,
+      "colors": [
+        "blue",
+        "white"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
+      "price": 120,
       "stock": 20,
       "onsale": true,
       "discount": 30,
@@ -420,28 +438,140 @@
     }
   ],
   "brands": [
-    { "Emporio Armani": "../assets/images/emporio-armani.png" },
-    { "Michael Kors": "../assets/images/michael-kors.jpg" },
-    { "Valentino": "../assets/images/valentino.jpg" },
-    { "Tory Burch": "../assets/images/tory-burch.png" },
-    { "Coach": "../assets/images/coach.png" },
-    { "Charles&Keith": "../assets/images/charleskeith.png" },
-    { "New Balance": "../assets/images/new-balance.svg" },
-    { "Adidas": "../assets/images/adidas.png" },
-    { "Nike": "../assets/images/nike.png" },
-    { "Ralph Lauren": "../assets/images/ralph-lauren.jpg" },
-    { "Liu Jo": "../assets/images/liu-jo.jpg" },
-    { "Tommy Hilfiger": "../assets/images/tommy-hilfiger.png" },
-    { "Armani Exchange": "../assets/images/armani-exchange.png" },
-    { "Versace Jeans Couture": "../assets/images/versace-jeans-couture.png" },
-    { "Pinko": "../assets/images/pinko.png" },
-    { "Love Moschino": "../assets/images/love-moschino.png" },
-    { "Lacoste": "../assets/images/lacoste.png" },
-    { "Marc Jacobs": "../assets/images/marc-jacobs.png" },
-    { "U.S POLO ASSN.": "../assets/images/us-polo-assn-Rkz56usX96bpwtJg.png" },
-    { "Bally": "../assets/images/bally-1hiKumYYehrIzAPv.svg" },
-    { "Lancome": "../assets/images/lancome-ncPitCOJvcI2gLDq.svg" },
-    { "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png" }
+    {
+      "Emporio Armani": "../assets/images/emporio-armani.png",
+      "id": "9bc9"
+    },
+    {
+      "Michael Kors": "../assets/images/michael-kors.jpg",
+      "id": "db47"
+    },
+    {
+      "Valentino": "../assets/images/valentino.jpg",
+      "id": "5a45"
+    },
+    {
+      "Tory Burch": "../assets/images/tory-burch.png",
+      "id": "6668"
+    },
+    {
+      "Coach": "../assets/images/coach.png",
+      "id": "136b"
+    },
+    {
+      "Charles&Keith": "../assets/images/charleskeith.png",
+      "id": "65c4"
+    },
+    {
+      "New Balance": "../assets/images/new-balance.svg",
+      "id": "ab45"
+    },
+    {
+      "Adidas": "../assets/images/adidas.png",
+      "id": "66e6"
+    },
+    {
+      "Nike": "../assets/images/nike.png",
+      "id": "1c8e"
+    },
+    {
+      "Ralph Lauren": "../assets/images/ralph-lauren.jpg",
+      "id": "7419"
+    },
+    {
+      "Liu Jo": "../assets/images/liu-jo.jpg",
+      "id": "352b"
+    },
+    {
+      "Tommy Hilfiger": "../assets/images/tommy-hilfiger.png",
+      "id": "3995"
+    },
+    {
+      "Armani Exchange": "../assets/images/armani-exchange.png",
+      "id": "8ea4"
+    },
+    {
+      "Versace Jeans Couture": "../assets/images/versace-jeans-couture.png",
+      "id": "1f13"
+    },
+    {
+      "Pinko": "../assets/images/pinko.png",
+      "id": "2b48"
+    },
+    {
+      "Love Moschino": "../assets/images/love-moschino.png",
+      "id": "e285"
+    },
+    {
+      "Lacoste": "../assets/images/lacoste.png",
+      "id": "4e25"
+    },
+    {
+      "Marc Jacobs": "../assets/images/marc-jacobs.png",
+      "id": "de32"
+    },
+    {
+      "U.S POLO ASSN.": "../assets/images/us-polo-assn-Rkz56usX96bpwtJg.png",
+      "id": "6921"
+    },
+    {
+      "Bally": "../assets/images/bally-1hiKumYYehrIzAPv.svg",
+      "id": "d797"
+    },
+    {
+      "Lancome": "../assets/images/lancome-ncPitCOJvcI2gLDq.svg",
+      "id": "13e1"
+    },
+    {
+      "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png",
+      "id": "27f3"
+    }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "6bc1",
+      "size": "Medium",
+      "color": "red",
+      "count": 1,
+      "name": "Emporio Armani shopper bag",
+      "price": 300,
+      "image": "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-0.webp"
+    },
+    {
+      "id": "6c61",
+      "size": "Medium",
+      "color": "red",
+      "count": 10,
+      "name": "Emporio Armani shopper bag",
+      "price": 300,
+      "image": "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-0.webp"
+    },
+    {
+      "id": "4f32",
+      "size": "Medium",
+      "color": "white",
+      "count": 1,
+      "name": "Emporio Armani shopper bag",
+      "price": 300,
+      "image": "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-0.jpg"
+    },
+    {
+      "id": "865b",
+      "size": "",
+      "color": "",
+      "count": 1,
+      "name": "Michael Kors çanta",
+      "price": 190,
+      "image": "../assets/images/product-images/michael-kors-canta/product-image-0.png"
+    },
+    {
+      "id": "7812",
+      "size": "",
+      "color": "",
+      "count": 7,
+      "name": "Michael Kors çanta",
+      "price": 190,
+      "image": "../assets/images/product-images/michael-kors-canta/product-image-0.png"
+    }
+  ]
 }

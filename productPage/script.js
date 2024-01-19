@@ -16,6 +16,14 @@ const imgSlider = document.querySelector(".img-slider");
 
 const mainImage = document.querySelector(".main-image img");
 
+const stock = document.getElementById("stock");
+
+const addToCartBtn = document.getElementById("add-btn");
+
+const decrementBtn = document.getElementById("decrement-btn");
+const incrementBtn = document.getElementById("increment-btn");
+const countEl = document.getElementById("count");
+
 let pickedSize;
 let pickedColor;
 let pickedCount;
@@ -122,7 +130,6 @@ const displayProduct = (product) => {
         removeActiveColor(colorBtn);
         btn.classList.add("active");
         pickedColor = btn.dataset.color;
-
         handleImage();
       });
     });
@@ -192,6 +199,8 @@ const displayProduct = (product) => {
 
     // Image Slider
     const imageSlider = () => {
+      sliderContainer.style.transform = `translateX(0)`;
+
       let index = 0;
 
       const images = document.querySelectorAll(".slider-container img");
@@ -300,8 +309,94 @@ const displayProduct = (product) => {
     }
   };
 
+  // Stock
+  if (!product.stock) {
+    stock.textContent = `Stokda yoxdur. Sifariş etmək üçün
+    Whatsapp və ya Instagram adresimizlə əlaqə saxlayın.`;
+    stock.style.color = "red";
+
+    addToCartBtn.setAttribute("disabled", "");
+    addToCartBtn.className = "disabled";
+  } else if (product.stock === 1) {
+    stock.textContent = `Yalnız bir ədəd qalıb`;
+  } else {
+    stock.textContent = `Stokda ${product.stock} ədəd var`;
+  }
+
+  const handleAddToCart = (product) => {
+    pickedCount = 1;
+    countEl.value = pickedCount;
+
+    pickedName = product.name;
+    if (!product.onsale) parseInt((pickedPrice = product.price));
+    else
+      pickedPrice = parseInt(
+        product.price - product.price * (product.discount / 100)
+      );
+
+    // Input interactionions
+    if (product.stock === 1) {
+    } else if (product.stock > 1 && product.stock <= 10) {
+      decrementBtn.addEventListener("click", () => {
+        if (pickedCount > 1) {
+          pickedCount--;
+        }
+        countEl.value = pickedCount;
+      });
+      incrementBtn.addEventListener("click", () => {
+        if (pickedCount < product.stock) {
+          pickedCount++;
+        }
+        countEl.value = pickedCount;
+      });
+    } else {
+      decrementBtn.addEventListener("click", () => {
+        if (pickedCount > 1) {
+          pickedCount--;
+        }
+        countEl.value = pickedCount;
+      });
+      incrementBtn.addEventListener("click", () => {
+        if (pickedCount < 10) {
+          pickedCount++;
+        }
+        countEl.value = pickedCount;
+      });
+    }
+
+    addToCartBtn.addEventListener("click", () => {
+      const selectedProduct = {
+        size: pickedSize,
+        color: pickedColor,
+        count: pickedCount,
+        name: pickedName,
+        price: pickedPrice,
+        image: pickedImage,
+      };
+
+      if (product.sizes.length > 1 && !pickedSize) {
+        alert("Please select a size before adding to cart!");
+        return;
+      }
+
+      postToCart(selectedProduct);
+    });
+  };
+
+  handleAddToCart(product);
   handleSliderBtns();
   handleImage();
+};
+
+const postToCart = async (product) => {
+  const response = await fetch("http://localhost:3000/cart", {
+    method: "POST",
+    body: JSON.stringify(product),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  });
+  const data = await response.json();
 };
 
 window.addEventListener("click", (e) => {
