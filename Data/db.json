@@ -505,5 +505,16 @@
       "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "4e12",
+      "size": "L",
+      "color": "blue",
+      "count": 1,
+      "name": "Lacoste Tennis T-shirt",
+      "price": 84,
+      "image": "../assets/images/product-images/lacoste-tennis-t-shirt-blue/product-image-0.jpg",
+      "brand": "Lacoste"
+    }
+  ]
 }

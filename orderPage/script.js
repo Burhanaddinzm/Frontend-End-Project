@@ -9,14 +9,16 @@ const locationInput = document.getElementById("location");
 const locationSpan = document.querySelector(".location-span");
 
 const checkboxInput = document.getElementById("checkbox");
-const deliveryFee = document.getElementById("delivery-fee");
 
 const submitBtn = document.getElementById("submit-btn");
+
+const subtotal = document.getElementById("subtotal");
+const deliveryFee = document.getElementById("delivery-fee");
+const total = document.getElementById("total");
 
 let inputChecked = checkboxInput.checked;
 
 // Form functionality
-
 const checkInputs = () => {
   if (
     nameInput.value.length > 0 &&
@@ -64,4 +66,16 @@ checkboxInput.addEventListener("change", () => {
   contactNumberInput,
 ].forEach((input) => {
   input.addEventListener("input", checkInputs);
+});
+
+window.addEventListener("click", (e) => {
+  const clicked = e.target;
+
+  // Set localstorage product name
+  if (clicked.id === "item-name") {
+    localStorage.setItem(
+      "selectedProductName",
+      JSON.stringify(clicked.textContent)
+    );
+  }
 });
