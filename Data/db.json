@@ -195,7 +195,7 @@
     },
     {
       "id": "9",
-      "name": "Charles&Keith çanta",
+      "name": "Charles&Keith çanta-1",
       "brand": "Charles&Keith",
       "images": {
         "default": [
@@ -221,7 +221,7 @@
     },
     {
       "id": "10",
-      "name": "Charles&Keith çanta",
+      "name": "Charles&Keith çanta-2",
       "brand": "Charles&Keith",
       "images": {
         "default": [
@@ -245,7 +245,7 @@
     },
     {
       "id": "11",
-      "name": "Charles&Keith çanta",
+      "name": "Charles&Keith çanta-3",
       "brand": "Charles&Keith",
       "images": {
         "default": [
@@ -268,7 +268,7 @@
     },
     {
       "id": "12",
-      "name": "Charles&Keith çanta",
+      "name": "Charles&Keith çanta-4",
       "brand": "Charles&Keith",
       "images": {
         "default": [
@@ -505,33 +505,5 @@
       "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png"
     }
   ],
-  "cart": [
-    {
-      "size": "L",
-      "color": "blue",
-      "count": 20,
-      "name": "Lacoste Tennis T-shirt",
-      "price": 84,
-      "image": "../assets/images/product-images/lacoste-tennis-t-shirt-blue/product-image-0.jpg",
-      "id": "28d4"
-    },
-    {
-      "size": "L",
-      "color": "white",
-      "count": 14,
-      "name": "Lacoste Tennis T-shirt",
-      "price": 84,
-      "image": "../assets/images/product-images/lacoste-tennis-t-shirt-white/product-image-0.jpg",
-      "id": "3114"
-    },
-    {
-      "size": "Medium",
-      "color": "white",
-      "count": 20,
-      "name": "Emporio Armani shopper bag",
-      "price": 300,
-      "image": "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-0.jpg",
-      "id": "7e55"
-    }
-  ]
+  "cart": []
 }

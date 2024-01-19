@@ -1,6 +1,9 @@
 "use strict";
 
 const fetchedProductId = JSON.parse(localStorage.getItem("selectedProductId"));
+const fetchedProductName = JSON.parse(
+  localStorage.getItem("selectedProductName")
+);
 
 const subcategory = document.getElementById("subcategory");
 const name = document.getElementById("name");
@@ -30,16 +33,28 @@ let pickedCount;
 let pickedName;
 let pickedPrice;
 let pickedImage;
+let pickedBrand;
 
 const fetchProduct = async () => {
   try {
-    const response = await fetch(
-      `http://localhost:3000/products?id=${fetchedProductId}`
-    );
-    const data = await response.json();
-    console.log(...data);
+    if (!fetchedProductName) {
+      const response = await fetch(
+        `http://localhost:3000/products?id=${fetchedProductId}`
+      );
+      const data = await response.json();
+      console.log(...data);
 
-    displayProduct(...data);
+      displayProduct(...data);
+    } else {
+      const response = await fetch(
+        `http://localhost:3000/products?name=${fetchedProductName}`
+      );
+      const data = await response.json();
+      console.log(...data);
+
+      displayProduct(...data);
+    }
+    localStorage.setItem("selectedProductName", JSON.stringify(""));
   } catch (error) {
     console.log("Failed to fetch data:" + error);
   }
@@ -327,6 +342,8 @@ const displayProduct = (product) => {
     pickedCount = 1;
     countEl.value = pickedCount;
 
+    // Picked Stuff Asignment
+    pickedBrand = product.brand;
     pickedName = product.name;
     if (!product.onsale) parseInt((pickedPrice = product.price));
     else
@@ -372,6 +389,7 @@ const displayProduct = (product) => {
         name: pickedName,
         price: pickedPrice,
         image: pickedImage,
+        brand: pickedBrand,
       };
 
       if (product.sizes.length > 1 && !pickedSize) {

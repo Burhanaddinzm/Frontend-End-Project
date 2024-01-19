@@ -57,11 +57,14 @@ main {
         }
 
         .item-info {
+          display: flex;
+          flex-direction: column;
           margin-top: 1rem;
           padding: 16px;
           border: 2px solid var(--border-color);
           border-radius: 12px;
           transition: all 0.2s linear;
+          min-height: 100px;
 
           &:hover {
             border-color: var(--bg-color-3);
@@ -77,6 +80,16 @@ main {
             font-weight: 700;
             font-size: 16px;
             color: var(--color-1);
+          }
+
+          #size {
+            margin-top: 0.5rem;
+            font-size: 12px;
+            padding: 4px 20px;
+            border-radius: 12px;
+            background: var(--bg-color-3);
+            font-weight: 600;
+            width: fit-content;
           }
         }
 
@@ -191,7 +204,7 @@ main {
       #clear-btn {
         background: var(--bg-color-1);
         border: 2px solid var(--bg-color-4);
-        
+
         &:hover {
           color: var(--color-2);
           background: var(--bg-color-4);

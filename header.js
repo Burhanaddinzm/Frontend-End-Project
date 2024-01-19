@@ -17,7 +17,7 @@ let isMenuOpen = false;
 let isCatalogOpen = false;
 
 //Fetch Cart
-const fetchCart = async () => {
+const fetchCartHeader = async () => {
   const response = await fetch("http://localhost:3000/cart");
   const data = await response.json();
 
@@ -117,4 +117,4 @@ window.addEventListener("click", (e) => {
   }
 });
 
-fetchCart();
+fetchCartHeader();

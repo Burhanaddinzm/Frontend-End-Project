@@ -612,11 +612,14 @@ main .container .cart-container .cart-item #item-img img {
      object-fit: cover;
 }
 main .container .cart-container .cart-item .item-info {
+  display: flex;
+  flex-direction: column;
   margin-top: 1rem;
   padding: 16px;
   border: 2px solid var(--border-color);
   border-radius: 12px;
   transition: all 0.2s linear;
+  min-height: 100px;
 }
 main .container .cart-container .cart-item .item-info:hover {
   border-color: var(--bg-color-3);
@@ -630,6 +633,16 @@ main .container .cart-container .cart-item .item-info #name {
   font-weight: 700;
   font-size: 16px;
   color: var(--color-1);
+}
+main .container .cart-container .cart-item .item-info #size {
+  margin-top: 0.5rem;
+  font-size: 12px;
+  padding: 4px 20px;
+  border-radius: 12px;
+  background: var(--bg-color-3);
+  font-weight: 600;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 main .container .cart-container .cart-item .count-control {
   margin-top: 0.5rem;
