@@ -393,18 +393,28 @@ const checkCart = async (selectedProduct, product) => {
   const data = await response.json();
 
   if (data.length > 0) {
-    data.forEach((item) => {
-      if (item.name === selectedProduct.name) {
-        const countToCheck = selectedProduct.count + item.count;
+    const matchingItem = data.find(
+      (item) =>
+        item.size === selectedProduct.size &&
+        item.color === selectedProduct.color &&
+        item.name === selectedProduct.name
+    );
 
-        if (countToCheck > product.stock) {
-          alert("This count exceeds stock!");
-        } else {
-          putToCart(selectedProduct, item);
-        }
-      } else postToCart(selectedProduct);
-    });
-  } else postToCart(selectedProduct);
+    if (matchingItem) {
+      const countToCheck = selectedProduct.count + matchingItem.count;
+
+      if (countToCheck > product.stock) {
+        alert("This count exceeds stock!");
+        return;
+      } else {
+        putToCart(selectedProduct, matchingItem);
+      }
+    } else {
+      postToCart(selectedProduct);
+    }
+  } else {
+    postToCart(selectedProduct);
+  }
 };
 
 const postToCart = async (product) => {

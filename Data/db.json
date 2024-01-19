@@ -27,8 +27,13 @@
       },
       "category": "Çanta",
       "subcategory": "Əl çantası",
-      "colors": ["red", "white"],
-      "sizes": ["Medium"],
+      "colors": [
+        "red",
+        "white"
+      ],
+      "sizes": [
+        "Medium"
+      ],
       "price": 300,
       "stock": 20,
       "onsale": false,
@@ -318,7 +323,9 @@
       "category": "Geyim",
       "subcategory": "Gödəkcə",
       "colors": [],
-      "sizes": ["M"],
+      "sizes": [
+        "M"
+      ],
       "price": 100,
       "stock": 10,
       "onsale": false,
@@ -383,7 +390,11 @@
       "category": "Ayaqqabı",
       "subcategory": "İdman ayaqqabısı",
       "colors": [],
-      "sizes": ["34", "36", "38"],
+      "sizes": [
+        "34",
+        "36",
+        "38"
+      ],
       "price": 300,
       "stock": 10,
       "onsale": false,
@@ -410,8 +421,15 @@
       },
       "category": "Geyim",
       "subcategory": "T-shirt",
-      "colors": ["blue", "white"],
-      "sizes": ["S", "M", "L"],
+      "colors": [
+        "blue",
+        "white"
+      ],
+      "sizes": [
+        "S",
+        "M",
+        "L"
+      ],
       "price": 120,
       "stock": 20,
       "onsale": true,
@@ -487,5 +505,33 @@
       "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "size": "L",
+      "color": "blue",
+      "count": 20,
+      "name": "Lacoste Tennis T-shirt",
+      "price": 84,
+      "image": "../assets/images/product-images/lacoste-tennis-t-shirt-blue/product-image-0.jpg",
+      "id": "28d4"
+    },
+    {
+      "size": "L",
+      "color": "white",
+      "count": 14,
+      "name": "Lacoste Tennis T-shirt",
+      "price": 84,
+      "image": "../assets/images/product-images/lacoste-tennis-t-shirt-white/product-image-0.jpg",
+      "id": "3114"
+    },
+    {
+      "size": "Medium",
+      "color": "white",
+      "count": 20,
+      "name": "Emporio Armani shopper bag",
+      "price": 300,
+      "image": "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-0.jpg",
+      "id": "7e55"
+    }
+  ]
 }
