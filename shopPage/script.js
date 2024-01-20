@@ -14,14 +14,9 @@ const productsContainer = document.querySelector(".products-container");
 // Page Nav
 const pageNavigation = document.querySelector(".page-navigation");
 
-//// Filter open for later
-// filterWrapper.classList.add("open-filter");
-// filtersPlusMinus.textContent = "-";
-// categoriesFilterUl.classList.remove("display-none");
-
 let isSortingOpen = false;
 
-// Sorting
+// Sorting opening/colosing
 sortingContainer.addEventListener("click", () => {
   if (!isSortingOpen) {
     sortingContainer.style.borderRadius = "12px 12px 0 0";
@@ -202,6 +197,26 @@ window.addEventListener("click", (e) => {
       "selectedProductId",
       JSON.stringify(selectedProductId)
     );
+  }
+
+  // Filters opening/colosing
+  if (clicked.classList.contains("categories")) {
+    const filterWrapper = clicked.closest(".filter-wrapper");
+    const filterSpan = clicked.children[0];
+
+    if (filterSpan.textContent === "-") {
+      filterSpan.textContent = "+";
+    } else {
+      filterSpan.textContent = "-";
+    }
+
+    filterWrapper.classList.toggle("open-filter");
+    const categoriesFilterUls = document.querySelectorAll(
+      "#categories-filter-ul"
+    );
+    categoriesFilterUls.forEach((ul) => {
+      ul.classList.toggle("display-none");
+    });
   }
 });
 

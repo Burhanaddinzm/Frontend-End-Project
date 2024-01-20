@@ -21,7 +21,6 @@ const itemsContainer = document.querySelector(".items-container");
 let inputChecked = checkboxInput.checked;
 
 let subtotal = 0;
-let total;
 
 // Form functionality
 const checkInputs = () => {

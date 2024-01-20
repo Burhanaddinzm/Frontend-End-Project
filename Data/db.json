@@ -527,26 +527,5 @@
       "id": "c5a6"
     }
   ],
-  "cart": [
-    {
-      "id": "3535",
-      "size": "M",
-      "color": "white",
-      "count": 1,
-      "name": "Lacoste Tennis T-shirt",
-      "price": 84,
-      "image": "../assets/images/product-images/lacoste-tennis-t-shirt-white/product-image-0.jpg",
-      "brand": "Lacoste"
-    },
-    {
-      "id": "6ae1",
-      "size": "",
-      "color": "",
-      "count": 1,
-      "name": "Versace Jeans Couture çanta",
-      "price": 355,
-      "image": "../assets/images/product-images/versace-jeans-couture-canta/product-image-0.png",
-      "brand": "Versace Jeans Couture"
-    }
-  ]
+  "cart": []
 }
