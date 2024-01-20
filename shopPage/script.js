@@ -42,9 +42,9 @@ const fetchProducts = async () => {
   try {
     const response = await fetch("http://localhost:3000/products");
     const data = await response.json();
-    sortData(data);
 
     const itemsPerPage = 8;
+    sortData(data, itemsPerPage);
     const pages = paginate(data, itemsPerPage);
 
     handlePage(pages);
@@ -176,7 +176,7 @@ const displayProducts = (products) => {
 };
 
 // Sorting
-const sortData = (data) => {
+const sortData = (data, itemsPerPage) => {
   window.addEventListener("click", (e) => {
     const clicked = e.target;
 
@@ -185,12 +185,12 @@ const sortData = (data) => {
     }
     if (clicked === sortHightLowBtn) {
       data.sort((a, b) => b.price - a.price);
-      const pages = paginate(data, 8);
+      const pages = paginate(data, itemsPerPage);
       handlePage(pages);
     }
     if (clicked === sortLowtHighBtn) {
       data.sort((a, b) => a.price - b.price);
-      const pages = paginate(data, 8);
+      const pages = paginate(data, itemsPerPage);
       handlePage(pages);
     }
   });
