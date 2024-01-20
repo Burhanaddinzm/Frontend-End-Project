@@ -103,7 +103,7 @@ const displayItems = (cartData) => {
         <a href="../productPage/product.html" id="item-name"
           >${item.name}</a
         >
-        <span id="size">${item.size}</span>
+        ${item.size ? `<span id="size">${item.size}</span>` : ""}
       </div>
     </div>
     <div class="price-container">
