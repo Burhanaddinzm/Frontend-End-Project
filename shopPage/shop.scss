@@ -196,7 +196,10 @@ main {
               }
             }
             // 3
-            #categories-filter-ul {
+            #categories-filter-ul,
+            #brands-filter-ul,
+            #sizes-filter-ul,
+            #colors-filter-ul {
               button {
                 font-weight: 500;
                 font-size: 14px;

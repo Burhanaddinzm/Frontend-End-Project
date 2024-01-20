@@ -214,7 +214,78 @@ window.addEventListener("click", (e) => {
     const categoriesFilterUls = document.querySelectorAll(
       "#categories-filter-ul"
     );
+
     categoriesFilterUls.forEach((ul) => {
+      ul.classList.toggle("display-none");
+    });
+  }
+
+  if (
+    clicked.classList.contains("category-btn") &&
+    clicked.nextElementSibling 
+  ) {
+    const chevron = clicked.children[0];
+    const subcategoriesFilterUl = clicked.nextElementSibling;
+    chevron.classList.toggle("inverted");
+
+    if (!clicked.style.fontWeight) {
+      clicked.style.fontWeight = "700";
+    } else {
+      clicked.style.fontWeight = "";
+    }
+    subcategoriesFilterUl.classList.toggle("display-none");
+  }
+
+  if (clicked.classList.contains("brands")) {
+    const filterWrapper = clicked.closest(".filter-wrapper");
+    const filterSpan = clicked.children[0];
+
+    if (filterSpan.textContent === "-") {
+      filterSpan.textContent = "+";
+    } else {
+      filterSpan.textContent = "-";
+    }
+
+    filterWrapper.classList.toggle("open-filter");
+    const brandsFilterUls = document.querySelectorAll("#brands-filter-ul");
+
+    brandsFilterUls.forEach((ul) => {
+      ul.classList.toggle("display-none");
+    });
+  }
+
+  if (clicked.classList.contains("sizes")) {
+    const filterWrapper = clicked.closest(".filter-wrapper");
+    const filterSpan = clicked.children[0];
+
+    if (filterSpan.textContent === "-") {
+      filterSpan.textContent = "+";
+    } else {
+      filterSpan.textContent = "-";
+    }
+
+    filterWrapper.classList.toggle("open-filter");
+    const sizesFilterUls = document.querySelectorAll("#sizes-filter-ul");
+
+    sizesFilterUls.forEach((ul) => {
+      ul.classList.toggle("display-none");
+    });
+  }
+
+  if (clicked.classList.contains("colors")) {
+    const filterWrapper = clicked.closest(".filter-wrapper");
+    const filterSpan = clicked.children[0];
+
+    if (filterSpan.textContent === "-") {
+      filterSpan.textContent = "+";
+    } else {
+      filterSpan.textContent = "-";
+    }
+
+    filterWrapper.classList.toggle("open-filter");
+    const colorsFilterUls = document.querySelectorAll("#colors-filter-ul");
+
+    colorsFilterUls.forEach((ul) => {
       ul.classList.toggle("display-none");
     });
   }

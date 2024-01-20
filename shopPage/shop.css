@@ -723,17 +723,26 @@ main .container .main-section .filters-container .filters .filter-wrapper #filte
 main .container .main-section .filters-container .filters .filter-wrapper #filter-btn:hover {
   background: var(--bg-color-3) !important;
 }
-main .container .main-section .filters-container .filters .filter-wrapper #categories-filter-ul button {
+main .container .main-section .filters-container .filters .filter-wrapper #categories-filter-ul button,
+main .container .main-section .filters-container .filters .filter-wrapper #brands-filter-ul button,
+main .container .main-section .filters-container .filters .filter-wrapper #sizes-filter-ul button,
+main .container .main-section .filters-container .filters .filter-wrapper #colors-filter-ul button {
   font-weight: 500;
   font-size: 14px;
 }
-main .container .main-section .filters-container .filters .filter-wrapper #categories-filter-ul img {
+main .container .main-section .filters-container .filters .filter-wrapper #categories-filter-ul img,
+main .container .main-section .filters-container .filters .filter-wrapper #brands-filter-ul img,
+main .container .main-section .filters-container .filters .filter-wrapper #sizes-filter-ul img,
+main .container .main-section .filters-container .filters .filter-wrapper #colors-filter-ul img {
   width: 12px;
   height: 12px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .container .main-section .filters-container .filters .filter-wrapper #categories-filter-ul #subcategories-filter-ul {
+main .container .main-section .filters-container .filters .filter-wrapper #categories-filter-ul #subcategories-filter-ul,
+main .container .main-section .filters-container .filters .filter-wrapper #brands-filter-ul #subcategories-filter-ul,
+main .container .main-section .filters-container .filters .filter-wrapper #sizes-filter-ul #subcategories-filter-ul,
+main .container .main-section .filters-container .filters .filter-wrapper #colors-filter-ul #subcategories-filter-ul {
   margin-left: 12px;
   border-left: 1px solid var(--border-color);
 }
