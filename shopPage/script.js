@@ -194,7 +194,6 @@ const sortData = (data, itemsPerPage) => {
       handlePage(pages);
     }
   });
-  return data;
 };
 
 window.addEventListener("click", (e) => {
