@@ -12,11 +12,16 @@ const checkboxInput = document.getElementById("checkbox");
 
 const submitBtn = document.getElementById("submit-btn");
 
-const subtotal = document.getElementById("subtotal");
+const subtotalEl = document.getElementById("subtotal");
 const deliveryFee = document.getElementById("delivery-fee");
-const total = document.getElementById("total");
+const totalEl = document.getElementById("total");
+
+const itemsContainer = document.querySelector(".items-container");
 
 let inputChecked = checkboxInput.checked;
+
+let subtotal = 0;
+let total;
 
 // Form functionality
 const checkInputs = () => {
@@ -40,6 +45,8 @@ const checkInputs = () => {
     submitBtn.disabled = true;
     submitBtn.classList.add("disabled");
   }
+
+  displayPrice();
 };
 
 checkboxInput.addEventListener("change", () => {
@@ -68,6 +75,55 @@ checkboxInput.addEventListener("change", () => {
   input.addEventListener("input", checkInputs);
 });
 
+const fetchCart = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/cart");
+    const data = await response.json();
+
+    console.log(data);
+    displayItems(data);
+  } catch (error) {
+    alert("Error fetching cart data:" + error);
+  }
+};
+
+const displayItems = (cartData) => {
+  itemsContainer.innerHTML = "";
+
+  cartData.forEach((item) => {
+    itemsContainer.innerHTML += `<div class="item">
+    <div class="wrapper">
+      <div id="item-img" class="img-container">
+        <img
+          src="${item.image}"
+          alt=""
+        />
+      </div>
+      <div class="name-size-container">
+        <a href="../productPage/product.html" id="item-name"
+          >${item.name}</a
+        >
+        <span id="size">${item.size}</span>
+      </div>
+    </div>
+    <div class="price-container">
+      <p id="price-count">AZN ${item.price.toFixed(2)} x ${item.count}</p>
+    </div>
+  </div>`;
+
+    subtotal += item.price * item.count;
+  });
+
+  displayPrice();
+};
+
+const displayPrice = () => {
+  subtotalEl.textContent = `AZN ${subtotal.toFixed(2)}`;
+  inputChecked
+    ? (totalEl.textContent = `AZN ${(subtotal + 5).toFixed(2)}`)
+    : (totalEl.textContent = `AZN ${subtotal.toFixed(2)}`);
+};
+
 window.addEventListener("click", (e) => {
   const clicked = e.target;
 
@@ -79,3 +135,5 @@ window.addEventListener("click", (e) => {
     );
   }
 });
+
+fetchCart();

@@ -57,6 +57,7 @@ main {
                 }
 
                 span {
+                  padding: 0 0.5rem;
                   font-size: 12px;
                   border: 2px solid transparent;
                   border-radius: 12px;
@@ -64,7 +65,8 @@ main {
                   font-weight: 700;
                   font-family: $font-family-2;
                   font-size: 12px;
-                  width: 50px;
+                  min-width: 50px;
+                  width: fit-content;
                   display: flex;
                   align-items: center;
                   justify-content: center;

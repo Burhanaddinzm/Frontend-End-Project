@@ -527,5 +527,36 @@
       "id": "c5a6"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "fe25",
+      "size": "L",
+      "color": "blue",
+      "count": 3,
+      "name": "Lacoste Tennis T-shirt",
+      "price": 84,
+      "image": "../assets/images/product-images/lacoste-tennis-t-shirt-blue/product-image-0.jpg",
+      "brand": "Lacoste"
+    },
+    {
+      "id": "61d4",
+      "size": "Medium",
+      "color": "red",
+      "count": 2,
+      "name": "Emporio Armani shopper bag",
+      "price": 300,
+      "image": "../assets/images/product-images/emporio-armani-shopper-bag-red/product-image-0.webp",
+      "brand": "Emporio Armani"
+    },
+    {
+      "id": "8e57",
+      "size": "Medium",
+      "color": "white",
+      "count": 2,
+      "name": "Emporio Armani shopper bag",
+      "price": 300,
+      "image": "../assets/images/product-images/emporio-armani-shopper-bag-white/product-image-0.jpg",
+      "brand": "Emporio Armani"
+    }
+  ]
 }
