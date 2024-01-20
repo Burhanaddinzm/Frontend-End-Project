@@ -42,11 +42,10 @@ const fetchProducts = async () => {
   try {
     const response = await fetch("http://localhost:3000/products");
     const data = await response.json();
-    console.log(data);
+    sortData(data);
 
     const itemsPerPage = 8;
     const pages = paginate(data, itemsPerPage);
-    console.log(pages);
 
     handlePage(pages);
   } catch (error) {
@@ -176,6 +175,28 @@ const displayProducts = (products) => {
   });
 };
 
+// Sorting
+const sortData = (data) => {
+  window.addEventListener("click", (e) => {
+    const clicked = e.target;
+
+    if (clicked === sortDefaultBtn) {
+      fetchProducts();
+    }
+    if (clicked === sortHightLowBtn) {
+      data.sort((a, b) => b.price - a.price);
+      const pages = paginate(data, 8);
+      handlePage(pages);
+    }
+    if (clicked === sortLowtHighBtn) {
+      data.sort((a, b) => a.price - b.price);
+      const pages = paginate(data, 8);
+      handlePage(pages);
+    }
+  });
+  return data;
+};
+
 window.addEventListener("click", (e) => {
   const clicked = e.target;
 
@@ -222,7 +243,7 @@ window.addEventListener("click", (e) => {
 
   if (
     clicked.classList.contains("category-btn") &&
-    clicked.nextElementSibling 
+    clicked.nextElementSibling
   ) {
     const chevron = clicked.children[0];
     const subcategoriesFilterUl = clicked.nextElementSibling;

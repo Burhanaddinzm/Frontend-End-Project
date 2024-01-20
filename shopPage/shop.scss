@@ -216,6 +216,19 @@ main {
                 border-left: 1px solid var(--border-color);
               }
             }
+            #colors-filter-ul button {
+              display: flex;
+              justify-content: start;
+              align-items: center;
+              gap: 10px;
+
+              span {
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                border: 1px solid #a1a1a1;
+              }
+            }
           }
 
           .filter-wrapper.open-filter {

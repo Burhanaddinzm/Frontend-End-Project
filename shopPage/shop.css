@@ -746,6 +746,18 @@ main .container .main-section .filters-container .filters .filter-wrapper #color
   margin-left: 12px;
   border-left: 1px solid var(--border-color);
 }
+main .container .main-section .filters-container .filters .filter-wrapper #colors-filter-ul button {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+main .container .main-section .filters-container .filters .filter-wrapper #colors-filter-ul button span {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #a1a1a1;
+}
 main .container .main-section .filters-container .filters .filter-wrapper.open-filter {
   display: flex;
   flex-direction: column;
