@@ -195,7 +195,7 @@
     },
     {
       "id": "9",
-      "name": "Charles&Keith çanta-1",
+      "name": "Charles and Keith çanta 1",
       "brand": "Charles&Keith",
       "images": {
         "default": [
@@ -221,7 +221,7 @@
     },
     {
       "id": "10",
-      "name": "Charles&Keith çanta-2",
+      "name": "Charles and Keith çanta 2",
       "brand": "Charles&Keith",
       "images": {
         "default": [
@@ -245,7 +245,7 @@
     },
     {
       "id": "11",
-      "name": "Charles&Keith çanta-3",
+      "name": "Charles and Keith çanta 3",
       "brand": "Charles&Keith",
       "images": {
         "default": [
@@ -268,7 +268,7 @@
     },
     {
       "id": "12",
-      "name": "Charles&Keith çanta-4",
+      "name": "Charles and Keith çanta 4",
       "brand": "Charles&Keith",
       "images": {
         "default": [
@@ -439,82 +439,93 @@
   ],
   "brands": [
     {
-      "Emporio Armani": "../assets/images/emporio-armani.png"
+      "Emporio Armani": "../assets/images/emporio-armani.png",
+      "id": "249e"
     },
     {
-      "Michael Kors": "../assets/images/michael-kors.jpg"
+      "Michael Kors": "../assets/images/michael-kors.jpg",
+      "id": "574a"
     },
     {
-      "Valentino": "../assets/images/valentino.jpg"
+      "Valentino": "../assets/images/valentino.jpg",
+      "id": "740b"
     },
     {
-      "Tory Burch": "../assets/images/tory-burch.png"
+      "Tory Burch": "../assets/images/tory-burch.png",
+      "id": "c4aa"
     },
     {
-      "Coach": "../assets/images/coach.png"
+      "Coach": "../assets/images/coach.png",
+      "id": "60d4"
     },
     {
-      "Charles&Keith": "../assets/images/charleskeith.png"
+      "Charles&Keith": "../assets/images/charleskeith.png",
+      "id": "7c62"
     },
     {
-      "New Balance": "../assets/images/new-balance.svg"
+      "New Balance": "../assets/images/new-balance.svg",
+      "id": "b570"
     },
     {
-      "Adidas": "../assets/images/adidas.png"
+      "Adidas": "../assets/images/adidas.png",
+      "id": "69a1"
     },
     {
-      "Nike": "../assets/images/nike.png"
+      "Nike": "../assets/images/nike.png",
+      "id": "5ce6"
     },
     {
-      "Ralph Lauren": "../assets/images/ralph-lauren.jpg"
+      "Ralph Lauren": "../assets/images/ralph-lauren.jpg",
+      "id": "5067"
     },
     {
-      "Liu Jo": "../assets/images/liu-jo.jpg"
+      "Liu Jo": "../assets/images/liu-jo.jpg",
+      "id": "0436"
     },
     {
-      "Tommy Hilfiger": "../assets/images/tommy-hilfiger.png"
+      "Tommy Hilfiger": "../assets/images/tommy-hilfiger.png",
+      "id": "6d64"
     },
     {
-      "Armani Exchange": "../assets/images/armani-exchange.png"
+      "Armani Exchange": "../assets/images/armani-exchange.png",
+      "id": "7282"
     },
     {
-      "Versace Jeans Couture": "../assets/images/versace-jeans-couture.png"
+      "Versace Jeans Couture": "../assets/images/versace-jeans-couture.png",
+      "id": "95b5"
     },
     {
-      "Pinko": "../assets/images/pinko.png"
+      "Pinko": "../assets/images/pinko.png",
+      "id": "d03a"
     },
     {
-      "Love Moschino": "../assets/images/love-moschino.png"
+      "Love Moschino": "../assets/images/love-moschino.png",
+      "id": "9296"
     },
     {
-      "Lacoste": "../assets/images/lacoste.png"
+      "Lacoste": "../assets/images/lacoste.png",
+      "id": "bd76"
     },
     {
-      "Marc Jacobs": "../assets/images/marc-jacobs.png"
+      "Marc Jacobs": "../assets/images/marc-jacobs.png",
+      "id": "2bb2"
     },
     {
-      "U.S POLO ASSN.": "../assets/images/us-polo-assn-Rkz56usX96bpwtJg.png"
+      "U.S POLO ASSN.": "../assets/images/us-polo-assn-Rkz56usX96bpwtJg.png",
+      "id": "4f66"
     },
     {
-      "Bally": "../assets/images/bally-1hiKumYYehrIzAPv.svg"
+      "Bally": "../assets/images/bally-1hiKumYYehrIzAPv.svg",
+      "id": "6e8f"
     },
     {
-      "Lancome": "../assets/images/lancome-ncPitCOJvcI2gLDq.svg"
+      "Lancome": "../assets/images/lancome-ncPitCOJvcI2gLDq.svg",
+      "id": "f240"
     },
     {
-      "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png"
+      "Versace": "../assets/images/versace-1jiONrDrhwfkvUlV.png",
+      "id": "c5a6"
     }
   ],
-  "cart": [
-    {
-      "id": "37c5",
-      "size": "",
-      "color": "",
-      "count": 1,
-      "name": "Michael Kors çanta",
-      "price": 190,
-      "image": "../assets/images/product-images/michael-kors-canta/product-image-0.png",
-      "brand": "Michael Kors"
-    }
-  ]
+  "cart": []
 }
