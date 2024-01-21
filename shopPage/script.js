@@ -19,6 +19,9 @@ const fetchedFilterSize = JSON.parse(localStorage.getItem("filterSize"));
 const fetchedFilterColor = JSON.parse(localStorage.getItem("filterColor"));
 const fetchedFilterOnsale = JSON.parse(localStorage.getItem("filterOnsale"));
 
+const fetchedProductName = JSON.parse(
+  localStorage.getItem("selectedProductName")
+);
 // Products
 const productsContainer = document.querySelector(".products-container");
 
@@ -53,14 +56,28 @@ const fetchProducts = async () => {
   try {
     const itemsPerPage = 8;
 
-    const response = await fetch("http://localhost:3000/products");
-    const data = await response.json();
+    if (!fetchedProductName) {
+      const response = await fetch("http://localhost:3000/products");
+      const data = await response.json();
 
-    const pages = paginate(filterData(data), itemsPerPage);
+      const pages = paginate(filterData(data), itemsPerPage);
 
-    handlePage(pages);
-    sortData(filterData(data), itemsPerPage);
-    resetFilters();
+      handlePage(pages);
+      sortData(filterData(data), itemsPerPage);
+      resetFilters();
+    } else {
+      const response = await fetch(
+        `http://localhost:3000/products?name=${fetchedProductName}`
+      );
+      const data = await response.json();
+
+      const pages = paginate(filterData(data), itemsPerPage);
+
+      handlePage(pages);
+      sortData(filterData(data), itemsPerPage);
+      resetFilters();
+      localStorage.setItem("selectedProductName", JSON.stringify(""));
+    }
   } catch (error) {
     console.error("Error fetching products:", error);
   }

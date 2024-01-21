@@ -42,7 +42,7 @@ window.addEventListener("resize", () => {
   }
 });
 
-// Search not working
+// Search
 const searchHandler = (data) => {
   const searchForm = document.getElementById("search-form");
   const searchFormInput = document.getElementById("search-input");
@@ -50,12 +50,15 @@ const searchHandler = (data) => {
   searchForm.addEventListener("submit", () => {
     const searchRequest = searchFormInput.value.trim();
 
-    const searchedItem = data.some((product) =>
-      product.name.includes(searchRequest)
+    const searchedItems = data.filter((item) =>
+      item.name.toLowerCase().includes(searchRequest.toLowerCase())
     );
-    const searchedName = searchedItem.name;
 
-    localStorage.setItem("selectedProductName", JSON.stringify(searchedName));
+    if (searchedItems.length > 0) {
+      const searchedName = searchedItems[0].name;
+
+      localStorage.setItem("selectedProductName", JSON.stringify(searchedName));
+    }
   });
 };
 
@@ -154,4 +157,5 @@ window.addEventListener("click", (e) => {
   }
 });
 
+fetchProductsHeader();
 fetchCartHeader();
