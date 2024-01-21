@@ -38,7 +38,7 @@ window.addEventListener("click", (e) => {
   if (clicked.closest(".card")) {
     const selectedBrand = clicked.closest(".card").dataset.brand;
 
-    localStorage.setItem("selectedBrand", JSON.stringify(selectedBrand));
+    localStorage.setItem("filterBrand", JSON.stringify(selectedBrand));
   }
 });
 

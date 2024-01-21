@@ -788,7 +788,7 @@ main .container .main-section .filters-container .filters .filter-wrapper.open-f
   margin-left: 12px;
   border-left: 1px solid var(--border-color);
 }
-main .container .main-section .filters-container #clear-filters {
+main .container .main-section .filters-container #clear-filters-btn {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -806,13 +806,13 @@ main .container .main-section .filters-container #clear-filters {
   border: 1px solid var(--border-color);
   transition: background-color 0.2s linear;
 }
-main .container .main-section .filters-container #clear-filters img {
+main .container .main-section .filters-container #clear-filters-btn img {
   width: 12px;
   height: 12px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .container .main-section .filters-container #clear-filters:hover {
+main .container .main-section .filters-container #clear-filters-btn:hover {
   background: var(--bg-color-3);
 }
 main .container .page-navigation {

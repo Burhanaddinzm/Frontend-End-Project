@@ -464,7 +464,7 @@ window.addEventListener("click", (e) => {
   // Subcategory
   if (clicked.id === "subcategory") {
     localStorage.setItem(
-      "productPageSubcategory",
+      "filterSubcategory",
       JSON.stringify(clicked.textContent)
     );
   }

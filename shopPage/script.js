@@ -8,6 +8,14 @@ const sortDefaultBtn = document.getElementById("sort-default-btn");
 const sortLowtHighBtn = document.getElementById("sort-lowt-high-btn");
 const sortHightLowBtn = document.getElementById("sort-hight-low-btn");
 
+// Filters
+const clearFiltersBtn = document.getElementById("clear-filters-btn");
+
+const fetchedFilterBrand = JSON.parse(localStorage.getItem("filterBrand"));
+const fetchedFilterSubcategory = JSON.parse(
+  localStorage.getItem("filterSubcategory")
+);
+
 // Products
 const productsContainer = document.querySelector(".products-container");
 
@@ -40,14 +48,17 @@ sortingContainer.addEventListener("click", () => {
 // Fetch Products
 const fetchProducts = async () => {
   try {
+    const itemsPerPage = 8;
+
     const response = await fetch("http://localhost:3000/products");
     const data = await response.json();
 
-    const itemsPerPage = 8;
-    sortData(data, itemsPerPage);
-    const pages = paginate(data, itemsPerPage);
+    const pages = paginate(filterData(data), itemsPerPage);
 
     handlePage(pages);
+    sortData(filterData(data), itemsPerPage);
+    localStorage.setItem("filterBrand", JSON.stringify(""));
+    localStorage.setItem("filterSubcategory", JSON.stringify(""));
   } catch (error) {
     console.error("Error fetching products:", error);
   }
@@ -196,6 +207,49 @@ const sortData = (data, itemsPerPage) => {
   });
 };
 
+// Brands
+const fetchBrand = async () => {
+  try {
+    const response = await fetch(`http://localhost:3000/brands`);
+    const data = await response.json();
+    displayBrands(data);
+  } catch (error) {
+    console.log("Failed to fetch brands data:" + error);
+  }
+};
+
+const displayBrands = (brandsData) => {
+  const brandsFilterUl = document.getElementById("brands-filter-ul");
+
+  brandsFilterUl.innerHTML = "";
+
+  brandsData.forEach((data) => {
+    brandsFilterUl.innerHTML += `<li>
+    <button data-brand="${
+      Object.getOwnPropertyNames(data)[0]
+    }" class="category-btn">${Object.getOwnPropertyNames(data)[0]}</button>
+  </li>`;
+  });
+};
+
+// Filter
+const filterData = (data) => {
+  const oldData = data;
+
+  if (fetchedFilterBrand) {
+    data = data.filter((item) => item.brand === fetchedFilterBrand);
+  }
+  if (fetchedFilterSubcategory) {
+    data = data.filter((item) => item.subcategory === fetchedFilterSubcategory);
+  }
+
+  if ((!fetchedFilterBrand && !fetchedFilterSubcategory) || data.length === 0) {
+    return oldData;
+  } else {
+    return data;
+  }
+};
+
 window.addEventListener("click", (e) => {
   const clicked = e.target;
 
@@ -311,4 +365,5 @@ window.addEventListener("click", (e) => {
   }
 });
 
+fetchBrand();
 fetchProducts();
