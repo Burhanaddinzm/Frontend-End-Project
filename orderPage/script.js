@@ -79,7 +79,6 @@ const fetchCart = async () => {
     const response = await fetch("http://localhost:3000/cart");
     const data = await response.json();
 
-    console.log(data);
     displayItems(data);
   } catch (error) {
     alert("Error fetching cart data:" + error);

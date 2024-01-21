@@ -6,11 +6,10 @@ const fetchBrands = async () => {
   try {
     const response = await fetch("http://localhost:3000/brands");
     const data = await response.json();
-    console.log(data);
 
     displayBrands(data);
   } catch (error) {
-    console.error("Failed to fetch data" + error);
+    alert("Failed to fetch data" + error);
   }
 };
 

@@ -18,18 +18,26 @@ let isCatalogOpen = false;
 
 // Fetch Products
 const fetchProductsHeader = async () => {
-  const response = await fetch("http://localhost:3000/products");
-  const data = await response.json();
+  try {
+    const response = await fetch("http://localhost:3000/products");
+    const data = await response.json();
 
-  searchHandler(data);
+    searchHandler(data);
+  } catch (error) {
+    alert("Failed to fetch products:" + error);
+  }
 };
 
 // Fetch Cart
 const fetchCartHeader = async () => {
-  const response = await fetch("http://localhost:3000/cart");
-  const data = await response.json();
+  try {
+    const response = await fetch("http://localhost:3000/cart");
+    const data = await response.json();
 
-  cartItemCount.textContent = data.length;
+    cartItemCount.textContent = data.length;
+  } catch (error) {
+    alert("Failed to fetch card:" + error);
+  }
 };
 
 // Responsive Resize

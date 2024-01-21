@@ -6,10 +6,14 @@ const orderBtn = document.getElementById("order-btn");
 const clearBtn = document.getElementById("clear-btn");
 
 const fetchProducts = async (cartData) => {
-  const response = await fetch(`http://localhost:3000/products`);
-  const data = await response.json();
+  try {
+    const response = await fetch(`http://localhost:3000/products`);
+    const data = await response.json();
 
-  modifyCart(cartData, data);
+    modifyCart(cartData, data);
+  } catch (error) {
+    alert("Failed to fetch products:" + error);
+  }
 };
 
 const fetchCart = async () => {
@@ -20,7 +24,7 @@ const fetchCart = async () => {
     fetchProducts(data);
     displayCart(data);
   } catch (error) {
-    console.log("Failed to fetch cart data:" + error);
+    alert("Failed to fetch cart data:" + error);
   }
 };
 
@@ -91,7 +95,7 @@ const putProduct = async (id, item) => {
       headers: { "Content-type": "application/json; charset=UTF-8" },
     });
   } catch (error) {
-    console.log("Failed to put to cart:" + error);
+    alert("Failed to put to cart:" + error);
   }
 };
 

@@ -79,7 +79,7 @@ const fetchProducts = async () => {
       localStorage.setItem("selectedProductName", JSON.stringify(""));
     }
   } catch (error) {
-    console.error("Error fetching products:", error);
+    alert("Failed to fetch products:" + error);
   }
 };
 
@@ -233,7 +233,7 @@ const fetchBrand = async () => {
     const data = await response.json();
     displayBrands(data);
   } catch (error) {
-    console.log("Failed to fetch brands data:" + error);
+    alert("Failed to fetch brands data:" + error);
   }
 };
 
@@ -339,7 +339,7 @@ clearFiltersBtn.addEventListener("click", async () => {
     handlePage(pages);
     sortData(data, itemsPerPage);
   } catch (error) {
-    console.log("Failed to fetch products:" + error);
+    alert("Failed to fetch products:" + error);
   }
 });
 

@@ -54,7 +54,7 @@ const fetchProduct = async () => {
     }
     localStorage.setItem("selectedProductName", JSON.stringify(""));
   } catch (error) {
-    console.log("Failed to fetch product:" + error);
+    alert("Failed to fetch product:" + error);
   }
 };
 
@@ -406,31 +406,35 @@ const displayProduct = (product) => {
 };
 
 const checkCart = async (selectedProduct, product) => {
-  const response = await fetch("http://localhost:3000/cart");
-  const data = await response.json();
+  try {
+    const response = await fetch("http://localhost:3000/cart");
+    const data = await response.json();
 
-  if (data.length > 0) {
-    const matchingItem = data.find(
-      (item) =>
-        item.size === selectedProduct.size &&
-        item.color === selectedProduct.color &&
-        item.name === selectedProduct.name
-    );
+    if (data.length > 0) {
+      const matchingItem = data.find(
+        (item) =>
+          item.size === selectedProduct.size &&
+          item.color === selectedProduct.color &&
+          item.name === selectedProduct.name
+      );
 
-    if (matchingItem) {
-      const countToCheck = selectedProduct.count + matchingItem.count;
+      if (matchingItem) {
+        const countToCheck = selectedProduct.count + matchingItem.count;
 
-      if (countToCheck > product.stock) {
-        alert("This count exceeds stock!");
-        return;
+        if (countToCheck > product.stock) {
+          alert("This count exceeds stock!");
+          return;
+        } else {
+          putToCart(selectedProduct, matchingItem);
+        }
       } else {
-        putToCart(selectedProduct, matchingItem);
+        postToCart(selectedProduct);
       }
     } else {
       postToCart(selectedProduct);
     }
-  } else {
-    postToCart(selectedProduct);
+  } catch (error) {
+    alert("Failed to fetch cart" + error);
   }
 };
 
@@ -444,7 +448,7 @@ const postToCart = async (product) => {
       },
     });
   } catch (error) {
-    console.log("Failed to post to cart:" + error);
+    alert("Failed to post to cart:" + error);
   }
 };
 
@@ -458,7 +462,7 @@ const putToCart = async (product, cartData) => {
       headers: { "Content-type": "application/json; charset=UTF-8" },
     });
   } catch (error) {
-    console.log("Failed to put to cart:" + error);
+    alert("Failed to put to cart:" + error);
   }
 };
 
