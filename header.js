@@ -115,6 +115,18 @@ window.addEventListener("click", (e) => {
       });
     }
   }
+
+  // Filter stuff
+  if (clicked.dataset.subcategory) {
+    localStorage.setItem(
+      "filterSubcategory",
+      JSON.stringify(clicked.dataset.subcategory)
+    );
+  }
+
+  if (clicked.dataset.onsale) {
+    localStorage.setItem("filterOnsale", clicked.dataset.onsale);
+  }
 });
 
 fetchCartHeader();

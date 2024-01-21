@@ -42,7 +42,6 @@ const fetchProduct = async () => {
         `http://localhost:3000/products?id=${fetchedProductId}`
       );
       const data = await response.json();
-      console.log(...data);
 
       displayProduct(...data);
     } else {
@@ -50,13 +49,12 @@ const fetchProduct = async () => {
         `http://localhost:3000/products?name=${fetchedProductName}`
       );
       const data = await response.json();
-      console.log(...data);
 
       displayProduct(...data);
     }
     localStorage.setItem("selectedProductName", JSON.stringify(""));
   } catch (error) {
-    console.log("Failed to fetch data:" + error);
+    console.log("Failed to fetch product:" + error);
   }
 };
 
@@ -287,6 +285,7 @@ const displayProduct = (product) => {
       handleSliderBtns();
       imageSlider();
     });
+
     imageSlider();
   };
 
@@ -436,26 +435,31 @@ const checkCart = async (selectedProduct, product) => {
 };
 
 const postToCart = async (product) => {
-  const response = await fetch("http://localhost:3000/cart", {
-    method: "POST",
-    body: JSON.stringify(product),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  });
-  const data = await response.json();
+  try {
+    const response = await fetch("http://localhost:3000/cart", {
+      method: "POST",
+      body: JSON.stringify(product),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+  } catch (error) {
+    console.log("Failed to post to cart:" + error);
+  }
 };
 
 const putToCart = async (product, cartData) => {
   product.count += cartData.count;
 
-  const response = await fetch(`http://localhost:3000/cart/${cartData.id}`, {
-    method: "PUT",
-    body: JSON.stringify(product),
-    headers: { "Content-type": "application/json; charset=UTF-8" },
-  });
-
-  const data = await response.json();
+  try {
+    const response = await fetch(`http://localhost:3000/cart/${cartData.id}`, {
+      method: "PUT",
+      body: JSON.stringify(product),
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    });
+  } catch (error) {
+    console.log("Failed to put to cart:" + error);
+  }
 };
 
 window.addEventListener("click", (e) => {

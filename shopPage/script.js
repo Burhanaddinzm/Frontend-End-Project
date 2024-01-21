@@ -15,6 +15,9 @@ const fetchedFilterBrand = JSON.parse(localStorage.getItem("filterBrand"));
 const fetchedFilterSubcategory = JSON.parse(
   localStorage.getItem("filterSubcategory")
 );
+const fetchedFilterSize = JSON.parse(localStorage.getItem("filterSize"));
+const fetchedFilterColor = JSON.parse(localStorage.getItem("filterColor"));
+const fetchedFilterOnsale = JSON.parse(localStorage.getItem("filterOnsale"));
 
 // Products
 const productsContainer = document.querySelector(".products-container");
@@ -57,8 +60,7 @@ const fetchProducts = async () => {
 
     handlePage(pages);
     sortData(filterData(data), itemsPerPage);
-    localStorage.setItem("filterBrand", JSON.stringify(""));
-    localStorage.setItem("filterSubcategory", JSON.stringify(""));
+    resetFilters();
   } catch (error) {
     console.error("Error fetching products:", error);
   }
@@ -243,12 +245,86 @@ const filterData = (data) => {
     data = data.filter((item) => item.subcategory === fetchedFilterSubcategory);
   }
 
-  if ((!fetchedFilterBrand && !fetchedFilterSubcategory) || data.length === 0) {
+  if (fetchedFilterSize) {
+    data = data.filter((item) => item.sizes.includes(fetchedFilterSize));
+  }
+
+  if (fetchedFilterColor) {
+    data = data.filter((item) => item.colors.includes(fetchedFilterColor));
+  }
+
+  if (fetchedFilterOnsale) {
+    data = data.filter((item) => item.onsale);
+  }
+
+  if (
+    (!fetchedFilterBrand &&
+      !fetchedFilterSubcategory &&
+      !fetchedFilterSize &&
+      !fetchedFilterColor &&
+      !fetchedFilterOnsale) ||
+    data.length === 0
+  ) {
     return oldData;
   } else {
     return data;
   }
 };
+
+const resetFilters = () => {
+  localStorage.setItem("filterBrand", JSON.stringify(""));
+  localStorage.setItem("filterSubcategory", JSON.stringify(""));
+  localStorage.setItem("filterSize", JSON.stringify(""));
+  localStorage.setItem("filterColor", JSON.stringify(""));
+  localStorage.setItem("filterOnsale", JSON.stringify(""));
+};
+
+const handleFilter = () => {
+  window.addEventListener("click", (e) => {
+    const clicked = e.target;
+    if (clicked.dataset.subcategory) {
+      window.location.reload();
+    }
+
+    if (clicked.dataset.brand) {
+      localStorage.setItem(
+        "filterBrand",
+        JSON.stringify(clicked.dataset.brand)
+      );
+      window.location.reload();
+    }
+
+    if (clicked.dataset.size) {
+      localStorage.setItem("filterSize", JSON.stringify(clicked.dataset.size));
+      window.location.reload();
+    }
+
+    if (clicked.dataset.color) {
+      localStorage.setItem(
+        "filterColor",
+        JSON.stringify(clicked.dataset.color)
+      );
+      window.location.reload();
+    }
+  });
+};
+
+// Last minute implementation
+clearFiltersBtn.addEventListener("click", async () => {
+  try {
+    const itemsPerPage = 8;
+
+    const response = await fetch("http://localhost:3000/products");
+    const data = await response.json();
+
+    const pages = paginate(data, itemsPerPage);
+
+    handlePage(pages);
+    sortData(data, itemsPerPage);
+  } catch (error) {
+    console.log("Failed to fetch products:" + error);
+  }
+});
 
 window.addEventListener("click", (e) => {
   const clicked = e.target;
@@ -367,3 +443,4 @@ window.addEventListener("click", (e) => {
 
 fetchBrand();
 fetchProducts();
+handleFilter();

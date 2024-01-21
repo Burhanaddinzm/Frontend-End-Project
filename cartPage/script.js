@@ -16,7 +16,6 @@ const fetchCart = async () => {
   try {
     const response = await fetch(`http://localhost:3000/cart`);
     const data = await response.json();
-    console.log(data);
 
     fetchProducts(data);
     displayCart(data);
@@ -24,8 +23,6 @@ const fetchCart = async () => {
     console.log("Failed to fetch cart data:" + error);
   }
 };
-
-fetchCart();
 
 const displayCart = (cartData) => {
   cartContainer.innerHTML = "";
@@ -77,17 +74,25 @@ const displayCart = (cartData) => {
 };
 
 const deleteProduct = async (id) => {
-  const response = await fetch(`http://localhost:3000/cart/${id}`, {
-    method: "DELETE",
-  });
+  try {
+    const response = await fetch(`http://localhost:3000/cart/${id}`, {
+      method: "DELETE",
+    });
+  } catch (error) {
+    console.log("Failed to delete product:" + error);
+  }
 };
 
 const putProduct = async (id, item) => {
-  const response = await fetch(`http://localhost:3000/cart/${id}`, {
-    method: "PUT",
-    body: JSON.stringify(item),
-    headers: { "Content-type": "application/json; charset=UTF-8" },
-  });
+  try {
+    const response = await fetch(`http://localhost:3000/cart/${id}`, {
+      method: "PUT",
+      body: JSON.stringify(item),
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    });
+  } catch (error) {
+    console.log("Failed to put to cart:" + error);
+  }
 };
 
 const modifyCart = (cartData, productData) => {
@@ -142,3 +147,5 @@ window.addEventListener("click", (e) => {
       JSON.stringify(clicked.closest(".item-info").dataset.name)
     );
 });
+
+fetchCart();
