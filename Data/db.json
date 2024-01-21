@@ -527,5 +527,16 @@
       "id": "c5a6"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": "7be5",
+      "size": "",
+      "color": "",
+      "count": 1,
+      "name": "Valentino çanta",
+      "price": 200,
+      "image": "../assets/images/product-images/valentino-canta/product-image-0.jpg",
+      "brand": "Valentino"
+    }
+  ]
 }

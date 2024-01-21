@@ -16,7 +16,15 @@ let windowWidth = window.innerWidth;
 let isMenuOpen = false;
 let isCatalogOpen = false;
 
-//Fetch Cart
+// Fetch Products
+const fetchProductsHeader = async () => {
+  const response = await fetch("http://localhost:3000/products");
+  const data = await response.json();
+
+  searchHandler(data);
+};
+
+// Fetch Cart
 const fetchCartHeader = async () => {
   const response = await fetch("http://localhost:3000/cart");
   const data = await response.json();
@@ -33,6 +41,23 @@ window.addEventListener("resize", () => {
     if (isCatalogOpen) catalogContainer.classList.add("open-menu");
   }
 });
+
+// Search not working
+const searchHandler = (data) => {
+  const searchForm = document.getElementById("search-form");
+  const searchFormInput = document.getElementById("search-input");
+
+  searchForm.addEventListener("submit", () => {
+    const searchRequest = searchFormInput.value.trim();
+
+    const searchedItem = data.some((product) =>
+      product.name.includes(searchRequest)
+    );
+    const searchedName = searchedItem.name;
+
+    localStorage.setItem("selectedProductName", JSON.stringify(searchedName));
+  });
+};
 
 burgerMenu.addEventListener("click", () => {
   if (!isMenuOpen && !isCatalogOpen) {
